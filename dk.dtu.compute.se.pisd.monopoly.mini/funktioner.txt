@@ -1,47 +1,47 @@
 Velkommen til Monopoly, den yngste spiller starter!
-Vælg antal spillere?
-, vælg dit navn
+VÃ¦lg antal spillere?
+, vÃ¦lg dit navn
 , klik til at kaste med terningerne
 Grunden er ejet
 betal (insert amount) til 
 Grunden er ledig
-Vil du købe?, "Ja", "Nej"
+Vil du kÃ¸be?, "Ja", "Nej"
 JA
 NEJ
-Du har passeret start, du får (insert amount)
-Gå til start
-Gå 3 felter tilbage
-Gå til, , hvis du passerer start får du (insert amount)
-Gå til nærmeste grund 
-Gå til Rådhuspladsen 
-Gå til nærmeste rederi
-Gå til Cola
-Gå til Fanta
-Gå til Kastrup Lufthavn
-Gå til Billund Lufthavn
-Gå til Aalborg Lufthavn
-Gå til Esbjerg Lufthavn
+Du har passeret start, du fÃ¸r (insert amount)
+GÃ¥ til start
+GÃ¥ 3 felter tilbage
+GÃ¥ til, , hvis du passerer start fï¿½r du (insert amount)
+GÃ¥ til nÃ¦rmeste grund 
+Gï¿½ til Rï¿½dhuspladsen 
+Gï¿½ til nï¿½rmeste rederi
+Gï¿½ til Cola
+Gï¿½ til Fanta
+Gï¿½ til Kastrup Lufthavn
+Gï¿½ til Billund Lufthavn
+Gï¿½ til Aalborg Lufthavn
+Gï¿½ til Esbjerg Lufthavn
 Banken betaler (insert amount) i afkast for dine gode investeringer
-Du får renter fra banken, modtag (insert amount)
+Du fï¿½r renter fra banken, modtag (insert amount)
 Du har vundet en krydsordskonkurrence, modtag (insert amount)
-Du får penge tilbage i skat, modtag (insert amount)
-Du sælger aktier, modtag (insert amount)
+Du fï¿½r penge tilbage i skat, modtag (insert amount)
+Du sï¿½lger aktier, modtag (insert amount)
 Operaaften, modtag (insert amount) fra hver spiller
-Det er din fødselsdag, modtag (insert amount)
-Din livsforsikring øges, modtag (insert amount)
+Det er din fï¿½dselsdag, modtag (insert amount)
+Din livsforsikring ï¿½ges, modtag (insert amount)
 Du modtager (insert amount) for konsulentarbejde
-Du får andenpladsen i en skønhedskonkurrence, modtag (insert amount)
+Du fï¿½r andenpladsen i en skï¿½nhedskonkurrence, modtag (insert amount)
 Du modtager (insert amount) i arv
 Betal (insert amount) i skat
 Du bliver valgt som bestyrelsesformand betal (insert amount) til hver spiller
-Lægeregning, betal (insert amount)
+Lï¿½geregning, betal (insert amount)
 Hospitalsregning, betal (insert amount)
 Betal uddannelsesskat (insert amount)
 Reperation af hus/hotel, betal (insert amount) pr. hus og (insert amount) pr. hotel
-Frikort, dette kort beholdes og kan anvendes til at komme ud af fængslet
-Gå direkte i fængsel, du får ikke (insert amount) for at passere start
+Frikort, dette kort beholdes og kan anvendes til at komme ud af fï¿½ngslet
+Gï¿½ direkte i fï¿½ngsel, du fï¿½r ikke (insert amount) for at passere start
 Du har ikke nok penge
-Vil du sælge dine ejendomme
+Vil du sï¿½lge dine ejendomme
 Du har tabt
 
 
