@@ -16,7 +16,7 @@ public class RealEstate extends Property{
 	
 	private int nrOfHouses;
 	
-	private int houseValue;
+	private int houseValue; // hotel koster det samme som et hus
 	
 	private boolean builtHotel;
 	
@@ -35,6 +35,12 @@ public class RealEstate extends Property{
 		this.nrOfHouses--;
 		//TODO defensiv programmering = House min 0!
 	}
+	public int getHouseValue() {
+		return houseValue;
+	}
+	public void setHouseValue(int houseValue) {
+		this.houseValue = houseValue;
+	}
 	public boolean hotelCheck() { //Checker om der er bygget et hotel
 		return builtHotel;
 	}
@@ -46,9 +52,7 @@ public class RealEstate extends Property{
 	public void removeHotel() {
 		this.builtHotel = false;
 	}
-	
-	
-	
+	//TODO Lav en "set" fordeling af huse
 	
 
 }
