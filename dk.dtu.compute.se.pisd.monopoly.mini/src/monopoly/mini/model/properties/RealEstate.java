@@ -12,6 +12,43 @@ import monopoly.mini.model.Property;
  */
 public class RealEstate extends Property{
 	
-	// TODO to be implemented
+	// TODO to be implemented @Casper og Andy start d. 17/4
+	
+	private int nrOfHouses;
+	
+	private int houseValue;
+	
+	private boolean builtHotel;
+	
+	public int getNrOfHouses() {
+		return nrOfHouses; 
+	}
+	public void setNrOfHouses(int nrOfHouses) {
+		this.nrOfHouses = nrOfHouses;		
+	}
+	
+	public void addHouse() {
+		this.nrOfHouses++;
+		//TODO defensiv programering = max 4 houses!
+	}
+	public void removeHouse() {
+		this.nrOfHouses--;
+		//TODO defensiv programmering = House min 0!
+	}
+	public boolean hotelCheck() { //Checker om der er bygget et hotel
+		return builtHotel;
+	}
+	
+	public void addHotel() {
+		this.builtHotel = true;
+		//TODO defensiv programmering: Den kan kun være true 1 gang, indtil den bliver false
+	}
+	public void removeHotel() {
+		this.builtHotel = false;
+	}
+	
+	
+	
+	
 
 }
