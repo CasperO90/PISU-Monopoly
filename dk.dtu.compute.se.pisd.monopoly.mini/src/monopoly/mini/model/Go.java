@@ -1,5 +1,5 @@
 package monopoly.mini.model;
 
-public class Go {
+public class Go extends Space{
 
 }

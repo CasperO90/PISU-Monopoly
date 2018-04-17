@@ -1,5 +1,5 @@
 package monopoly.mini.model;
 
-public class Jail {
+public class Jail extends Space{
 
 }

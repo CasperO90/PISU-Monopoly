@@ -1,5 +1,7 @@
 package monopoly.mini.model.cards;
 
-public class CardGoToJail {
+import monopoly.mini.model.Card;
+
+public class CardGoToJail extends Card{
 
 }

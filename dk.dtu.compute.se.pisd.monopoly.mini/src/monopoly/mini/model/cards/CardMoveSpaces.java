@@ -1,5 +1,7 @@
 package monopoly.mini.model.cards;
 
-public class CardMoveSpaces {
+import monopoly.mini.model.Card;
+
+public class CardMoveSpaces extends Card{
 
 }

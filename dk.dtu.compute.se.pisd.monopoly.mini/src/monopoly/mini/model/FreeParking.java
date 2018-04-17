@@ -1,5 +1,5 @@
 package monopoly.mini.model;
 
-public class FreeParking {
+public class FreeParking extends Space{
 
 }

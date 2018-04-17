@@ -1,5 +1,7 @@
 package monopoly.mini.model.cards;
 
-public class CardPayMoneyToBank {
+import monopoly.mini.model.Card;
+
+public class CardPayMoneyToBank extends Card {
 
 }
