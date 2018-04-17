@@ -3,7 +3,7 @@ Rodovrevej
 Chance
 Hvidovrevej
 Indkomst skat
-Molslinje
+Kastrup Lufthavn
 Roskildevej
 Chance
 Valby Langgade
@@ -13,7 +13,7 @@ Frederiksberg All�
 Cola
 Bulowsvej
 Gl. kongevej
-Molslinje
+Billund Lufthavn
 Bernstoffsvej
 Chance
 Hellerupvej
@@ -23,7 +23,7 @@ Trianglen
 Chance
 Osterbrogade
 Gronningen
-Molslinje
+Aalborg lufthavn
 Bredgade
 Kongens Nytorv
 Fanta
@@ -33,7 +33,7 @@ Amagertorv
 Vimmerskaftet
 Chance
 Nygade
-Molslinje
+Esbjerg Lufthavn
 Chance
 Frederiksberggade
 Super skat
