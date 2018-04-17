@@ -1,18 +1,18 @@
-package dk.dtu.compute.se.pisd.monopoly.mini;
+package monopoly.mini;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Card;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Chance;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Game;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Property;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Space;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Tax;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.cards.CardMove;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.cards.CardReceiveMoneyFromBank;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.cards.PayTax;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.properties.Utility;
+import monopoly.mini.model.Card;
+import monopoly.mini.model.Chance;
+import monopoly.mini.model.Game;
+import monopoly.mini.model.Property;
+import monopoly.mini.model.Space;
+import monopoly.mini.model.Tax;
+import monopoly.mini.model.cards.CardMove;
+import monopoly.mini.model.cards.CardReceiveMoneyFromBank;
+import monopoly.mini.model.cards.PayTax;
+import monopoly.mini.model.properties.Utility;
 
 /**
  * Main class for setting up and running a (Mini-)Monoploy game.
@@ -42,7 +42,7 @@ public class MiniMonopoly {
 		game.addSpace(go);
 		
 		Property p = new Property();
-		p.setName("Rødovrevej");
+		p.setName("Rï¿½dovrevej");
 		p.setCost(1200);
 		p.setRent(50);
 		game.addSpace(p);
@@ -62,7 +62,7 @@ public class MiniMonopoly {
 		game.addSpace(t);
 
 		Utility s = new Utility();
-		s.setName("Øresund");
+		s.setName("ï¿½resund");
 		s.setCost(4000);
 		s.setRent(500);
 		game.addSpace(s);
@@ -84,7 +84,7 @@ public class MiniMonopoly {
 		game.addSpace(p);
 		
 		p = new Property();
-		p.setName("Allégade");
+		p.setName("Allï¿½gade");
 		p.setCost(2400);
 		p.setRent(150);
 		game.addSpace(p);
@@ -94,7 +94,7 @@ public class MiniMonopoly {
 		game.addSpace(prison);
 		
 		p = new Property();
-		p.setName("Frederiksberg Allé");
+		p.setName("Frederiksberg Allï¿½");
 		p.setCost(2800);
 		p.setRent(200);
 		game.addSpace(p);
@@ -106,7 +106,7 @@ public class MiniMonopoly {
 		game.addSpace(p);
 		
 		p = new Property();
-		p.setName("Bülowsvej");
+		p.setName("Bï¿½lowsvej");
 		p.setCost(2800);
 		p.setRent(200);
 		game.addSpace(p);
@@ -121,7 +121,7 @@ public class MiniMonopoly {
 		
 		CardMove move = new CardMove();
 		move.setTarget(game.getSpaces().get(9));
-		move.setText("Move to Allégade!");
+		move.setText("Move to Allï¿½gade!");
 		cards.add(move);
 		
 		PayTax tax = new PayTax();

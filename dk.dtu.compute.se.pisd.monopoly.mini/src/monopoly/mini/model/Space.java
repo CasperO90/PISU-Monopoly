@@ -1,8 +1,8 @@
-package dk.dtu.compute.se.pisd.monopoly.mini.model;
+package monopoly.mini.model;
 
-import dk.dtu.compute.se.pisd.designpatterns.Subject;
-import dk.dtu.compute.se.pisd.monopoly.mini.GameController;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.exceptions.PlayerBrokeException;
+import designpatterns.Subject;
+import monopoly.mini.GameController;
+import monopoly.mini.model.exceptions.PlayerBrokeException;
 
 /**
  * Represents a space (field) of the Monopoly game. The method
@@ -10,7 +10,7 @@ import dk.dtu.compute.se.pisd.monopoly.mini.model.exceptions.PlayerBrokeExceptio
  * action taken when a player arrives on the space. In order
  * to use this part of the model with the MVC-pattern, this
  * class extends the
- * {@link dk.dtu.compute.se.pisd.designpatterns.Subject} of
+ * {@link designpatterns.Subject} of
  * the observer design pattern.
  * 
  * @author Ekkart Kindler, ekki@dtu.dk

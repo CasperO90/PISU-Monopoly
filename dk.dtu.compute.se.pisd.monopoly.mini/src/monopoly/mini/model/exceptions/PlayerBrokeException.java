@@ -1,6 +1,6 @@
-package dk.dtu.compute.se.pisd.monopoly.mini.model.exceptions;
+package monopoly.mini.model.exceptions;
 
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Player;
+import monopoly.mini.model.Player;
 
 /**
  * An exception that indicates that a player went broke

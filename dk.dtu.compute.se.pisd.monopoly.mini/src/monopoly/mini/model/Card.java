@@ -1,7 +1,7 @@
-package dk.dtu.compute.se.pisd.monopoly.mini.model;
+package monopoly.mini.model;
 
-import dk.dtu.compute.se.pisd.monopoly.mini.GameController;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.exceptions.PlayerBrokeException;
+import monopoly.mini.GameController;
+import monopoly.mini.model.exceptions.PlayerBrokeException;
 
 /**
  * Represents a community chest or a chance card of the 

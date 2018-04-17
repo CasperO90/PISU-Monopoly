@@ -1,20 +1,20 @@
-package dk.dtu.compute.se.pisd.monopoly.mini;
+package monopoly.mini;
 
 import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
-import dk.dtu.compute.se.pisd.designpatterns.Observer;
-import dk.dtu.compute.se.pisd.designpatterns.Subject;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Game;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Player;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Space;
+import designpatterns.Observer;
+import designpatterns.Subject;
 import gui_fields.GUI_Car;
 import gui_fields.GUI_Car.Pattern;
 import gui_fields.GUI_Car.Type;
 import gui_fields.GUI_Field;
 import gui_fields.GUI_Player;
 import gui_main.GUI;
+import monopoly.mini.model.Game;
+import monopoly.mini.model.Player;
+import monopoly.mini.model.Space;
 
 /**
  * This class implements a view on the Monopoly game based

@@ -1,6 +1,6 @@
-package dk.dtu.compute.se.pisd.monopoly.mini.model.properties;
+package monopoly.mini.model.properties;
 
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Property;
+import monopoly.mini.model.Property;
 
 /**
  * A specific property, which represents real estate on which houses

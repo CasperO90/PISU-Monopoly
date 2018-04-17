@@ -1,15 +1,15 @@
-package dk.dtu.compute.se.pisd.monopoly.mini;
+package monopoly.mini;
 
 import java.awt.Color;
 import java.util.List;
 
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Card;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Game;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Player;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Property;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Space;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.exceptions.PlayerBrokeException;
 import gui_main.GUI;
+import monopoly.mini.model.Card;
+import monopoly.mini.model.Game;
+import monopoly.mini.model.Player;
+import monopoly.mini.model.Property;
+import monopoly.mini.model.Space;
+import monopoly.mini.model.exceptions.PlayerBrokeException;
 
 /**
  * The overall controller of a Monopoly game. It provides access
@@ -27,14 +27,14 @@ import gui_main.GUI;
  * from each other.
  * 
  * Note that it is crucial that all changes to the
- * {@link dk.dtu.compute.se.pisd.monopoly.mini.model.Game} need to
+ * {@link monopoly.mini.model.Game} need to
  * be made through this controller, since the GUI does not
  * follow the MVC pattern. For fully implementing the game, it will
  * be necessary to add more of these basic actions in this class.
  * 
  * The action methods of the
- * {@link dk.dtu.compute.se.pisd.monopoly.mini.model.Space} and
- * the {@link dk.dtu.compute.se.pisd.monopoly.mini.model.Card}
+ * {@link monopoly.mini.model.Space} and
+ * the {@link monopoly.mini.model.Card}
  * can be implemented based on the basic actions and activities
  * of this game controller. Then, the game controller takes care
  * of updating the GUI. 
@@ -175,7 +175,7 @@ public class GameController {
 
 	/**
 	 * This method implements a activity of asingle move of the given player.
-	 * It throws a {@link dk.dtu.compute.se.pisd.monopoly.mini.model.exceptions.PlayerBrokeException}
+	 * It throws a {@link monopoly.mini.model.exceptions.PlayerBrokeException}
 	 * if the player goes broke in this move. Note that this is still a very
 	 * basic implementation of the move of a player; many aspects are still
 	 * missing.

@@ -1,9 +1,9 @@
-package dk.dtu.compute.se.pisd.monopoly.mini.model.cards;
+package monopoly.mini.model.cards;
 
-import dk.dtu.compute.se.pisd.monopoly.mini.GameController;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Card;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.Player;
-import dk.dtu.compute.se.pisd.monopoly.mini.model.exceptions.PlayerBrokeException;
+import monopoly.mini.GameController;
+import monopoly.mini.model.Card;
+import monopoly.mini.model.Player;
+import monopoly.mini.model.exceptions.PlayerBrokeException;
 
 /**
  * A card that directs the player to pay tax to the bank. The tax amounts
