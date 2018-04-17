@@ -11,7 +11,7 @@ import monopoly.mini.model.Property;
 import monopoly.mini.model.Space;
 import monopoly.mini.model.exceptions.PlayerBrokeException;
 
-/**
+/***
  * The overall controller of a Monopoly game. It provides access
  * to all basic actions and activities for the game. All other
  * activities of the game, should be implemented by referring

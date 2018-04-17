@@ -13,35 +13,36 @@ Gå til start
 Gå 3 felter tilbage
 Gå til, , hvis du passerer start f�r du (insert amount)
 Gå til nærmeste grund 
-G� til R�dhuspladsen 
-G� til n�rmeste rederi
-G� til Cola
-G� til Fanta
-G� til Kastrup Lufthavn
-G� til Billund Lufthavn
-G� til Aalborg Lufthavn
-G� til Esbjerg Lufthavn
+Gå til Rådhuspladsen 
+Gå til nærmeste rederi
+Gå til Cola
+Gå til Fanta
+Gå til Kastrup Lufthavn
+Gå til Billund Lufthavn
+Gå til Aalborg Lufthavn
+Gå til Esbjerg Lufthavn
 Banken betaler (insert amount) i afkast for dine gode investeringer
-Du f�r renter fra banken, modtag (insert amount)
+Du får renter fra banken, modtag (insert amount)
 Du har vundet en krydsordskonkurrence, modtag (insert amount)
-Du f�r penge tilbage i skat, modtag (insert amount)
-Du s�lger aktier, modtag (insert amount)
+Du får penge tilbage i skat, modtag (insert amount)
+Du sælger aktier, modtag (insert amount)
 Operaaften, modtag (insert amount) fra hver spiller
-Det er din f�dselsdag, modtag (insert amount)
-Din livsforsikring �ges, modtag (insert amount)
+Det er din fødselsdag, modtag (insert amount)
+Din livsforsikring øges, modtag (insert amount)
 Du modtager (insert amount) for konsulentarbejde
-Du f�r andenpladsen i en sk�nhedskonkurrence, modtag (insert amount)
+Du får andenpladsen i en skønhedskonkurrence, modtag (insert amount)
 Du modtager (insert amount) i arv
 Betal (insert amount) i skat
 Du bliver valgt som bestyrelsesformand betal (insert amount) til hver spiller
-L�geregning, betal (insert amount)
+Lægeregning, betal (insert amount)
 Hospitalsregning, betal (insert amount)
 Betal uddannelsesskat (insert amount)
 Reperation af hus/hotel, betal (insert amount) pr. hus og (insert amount) pr. hotel
-Frikort, dette kort beholdes og kan anvendes til at komme ud af f�ngslet
-G� direkte i f�ngsel, du f�r ikke (insert amount) for at passere start
+Frikort, dette kort beholdes og kan anvendes til at komme ud af fængslet
+Gå direkte i f�ngsel, du får ikke (insert amount) for at passere start
 Du har ikke nok penge
-Vil du s�lge dine ejendomme
+Vil du sælge dine huse/hoteller
+Vil du pantsætte dine ejendomme
 Du har tabt
 
 
