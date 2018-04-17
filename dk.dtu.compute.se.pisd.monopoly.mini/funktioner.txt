@@ -1,0 +1,50 @@
+Velkommen til Monopoly, den yngste spiller starter!
+Vælg antal spillere?
+, vælg dit navn
+, klik til at kaste med terningerne
+Grunden er ejet
+betal (insert amount) til 
+Grunden er ledig
+Vil du købe?, "Ja", "Nej"
+JA
+NEJ
+Du har passeret start, du får (insert amount)
+Gå til start
+Gå 3 felter tilbage
+Gå til, , hvis du passerer start får du (insert amount)
+Gå til nærmeste grund 
+Gå til Rådhuspladsen 
+Gå til nærmeste rederi
+Gå til Cola
+Gå til Fanta
+Gå til Kastrup Lufthavn
+Gå til Billund Lufthavn
+Gå til Aalborg Lufthavn
+Gå til Esbjerg Lufthavn
+Banken betaler (insert amount) i afkast for dine gode investeringer
+Du får renter fra banken, modtag (insert amount)
+Du har vundet en krydsordskonkurrence, modtag (insert amount)
+Du får penge tilbage i skat, modtag (insert amount)
+Du sælger aktier, modtag (insert amount)
+Operaaften, modtag (insert amount) fra hver spiller
+Det er din fødselsdag, modtag (insert amount)
+Din livsforsikring øges, modtag (insert amount)
+Du modtager (insert amount) for konsulentarbejde
+Du får andenpladsen i en skønhedskonkurrence, modtag (insert amount)
+Du modtager (insert amount) i arv
+Betal (insert amount) i skat
+Du bliver valgt som bestyrelsesformand betal (insert amount) til hver spiller
+Lægeregning, betal (insert amount)
+Hospitalsregning, betal (insert amount)
+Betal uddannelsesskat (insert amount)
+Reperation af hus/hotel, betal (insert amount) pr. hus og (insert amount) pr. hotel
+Frikort, dette kort beholdes og kan anvendes til at komme ud af fængslet
+Gå direkte i fængsel, du får ikke (insert amount) for at passere start
+Du har ikke nok penge
+Vil du sælge dine ejendomme
+Du har tabt
+
+
+
+
+
