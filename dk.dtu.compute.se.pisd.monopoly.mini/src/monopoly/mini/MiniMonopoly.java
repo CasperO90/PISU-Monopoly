@@ -9,7 +9,7 @@ import monopoly.mini.model.Game;
 import monopoly.mini.model.Property;
 import monopoly.mini.model.Space;
 import monopoly.mini.model.Tax;
-import monopoly.mini.model.cards.CardMove;
+import monopoly.mini.model.cards.CardMoveToSpace;
 import monopoly.mini.model.cards.CardReceiveMoneyFromBank;
 import monopoly.mini.model.cards.PayTax;
 import monopoly.mini.model.properties.Utility;
@@ -119,7 +119,7 @@ public class MiniMonopoly {
 		
 		List<Card> cards = new ArrayList<Card>();
 		
-		CardMove move = new CardMove();
+		CardMoveToSpace move = new CardMoveToSpace();
 		move.setTarget(game.getSpaces().get(9));
 		move.setText("Move to All�gade!");
 		cards.add(move);

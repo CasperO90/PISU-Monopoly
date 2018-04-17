@@ -12,7 +12,7 @@ import monopoly.mini.model.exceptions.PlayerBrokeException;
  * @author Ekkart Kindler, ekki@dtu.dk
  * 
  */
-public class CardMove extends Card {
+public class CardMoveToSpace extends Card {
 	
 	private Space target;
 
