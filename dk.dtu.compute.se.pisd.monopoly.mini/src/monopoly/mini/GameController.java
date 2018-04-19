@@ -71,7 +71,7 @@ public class GameController {
 	 * the user.
 	 */
 	public void createPlayers() {
-		// TODO the players should be created interactively
+		// TODO the players should be created interactively // getuserstring(gui)
 		Player p = new Player();
 		p.setName("Player 1");
 		p.setCurrentPosition(game.getSpaces().get(0));
@@ -174,7 +174,7 @@ public class GameController {
 	}
 
 	/**
-	 * This method implements a activity of asingle move of the given player.
+	 * This method implements a activity of a single move of the given player.
 	 * It throws a {@link monopoly.mini.model.exceptions.PlayerBrokeException}
 	 * if the player goes broke in this move. Note that this is still a very
 	 * basic implementation of the move of a player; many aspects are still
