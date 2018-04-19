@@ -11,7 +11,7 @@ NEJ
 Du har passeret start, du før (insert amount)
 Gå til start
 Gå 3 felter tilbage
-Gå til, , hvis du passerer start f�r du (insert amount)
+Gå til, , hvis du passerer start får du (insert amount)
 Gå til nærmeste grund 
 Gå til Rådhuspladsen 
 Gå til nærmeste rederi
@@ -39,7 +39,7 @@ Hospitalsregning, betal (insert amount)
 Betal uddannelsesskat (insert amount)
 Reperation af hus/hotel, betal (insert amount) pr. hus og (insert amount) pr. hotel
 Frikort, dette kort beholdes og kan anvendes til at komme ud af fængslet
-Gå direkte i f�ngsel, du får ikke (insert amount) for at passere start
+Gå direkte i fængsel, du får ikke (insert amount) for at passere start
 Du har ikke nok penge
 Vil du sælge dine huse/hoteller
 Vil du pantsætte dine ejendomme
