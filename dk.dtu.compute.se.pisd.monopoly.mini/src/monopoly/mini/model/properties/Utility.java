@@ -13,6 +13,13 @@ public class Utility extends Property {
 	
 	// TODO to be implemented
 	
+<<<<<<< HEAD
+=======
+	// testing merging with branhces
+	//testing testing
+	//fgggg
+	int i = 9;
+>>>>>>> refs/heads/branch_1
 	
 
 }
