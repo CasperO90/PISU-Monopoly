@@ -12,7 +12,11 @@ import monopoly.mini.model.Property;
 public class Utility extends Property {
 	
 	// TODO to be implemented
-	//test test tst
+	
+	// testing merging with branhces
+	//testing testing
+	//fgggg
+	int i = 9;
 	
 
 }
