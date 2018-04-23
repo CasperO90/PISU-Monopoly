@@ -12,5 +12,7 @@ import monopoly.mini.model.Property;
 public class Utility extends Property {
 	
 	// TODO to be implemented
+	//test test tst
+	
 
 }
