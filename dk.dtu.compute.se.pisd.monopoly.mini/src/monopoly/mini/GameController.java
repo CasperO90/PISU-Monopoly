@@ -51,6 +51,12 @@ public class GameController {
 	private View view;
 	
     private boolean disposed = false;
+    
+    private int amountofplayers; 
+    
+    private Player [] players;
+    
+    
 	
 	/**
 	 * Constructor for a controller of a game.
@@ -72,6 +78,11 @@ public class GameController {
 	 */
 	public void createPlayers() {
 		// TODO the players should be created interactively // getuserstring(gui)
+		
+		int 
+		
+		
+		
 		Player p = new Player();
 		p.setName("Player 1");
 		p.setCurrentPosition(game.getSpaces().get(0));

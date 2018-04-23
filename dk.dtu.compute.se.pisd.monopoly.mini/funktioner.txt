@@ -21,25 +21,25 @@ Gå til Kastrup Lufthavn
 Gå til Billund Lufthavn
 Gå til Aalborg Lufthavn
 Gå til Esbjerg Lufthavn
-Banken betaler (insert amount) i afkast for dine gode investeringer
-Du får renter fra banken, modtag (insert amount)
-Du har vundet en krydsordskonkurrence, modtag (insert amount)
-Du får penge tilbage i skat, modtag (insert amount)
-Du sælger aktier, modtag (insert amount)
-Operaaften, modtag (insert amount) fra hver spiller
-Det er din fødselsdag, modtag (insert amount)
-Din livsforsikring øges, modtag (insert amount)
-Du modtager (insert amount) for konsulentarbejde
-Du får andenpladsen i en skønhedskonkurrence, modtag (insert amount)
-Du modtager (insert amount) i arv
-Betal (insert amount) i skat
-Du bliver valgt som bestyrelsesformand betal (insert amount) til hver spiller
-Lægeregning, betal (insert amount)
-Hospitalsregning, betal (insert amount)
-Betal uddannelsesskat (insert amount)
-Reperation af hus/hotel, betal (insert amount) pr. hus og (insert amount) pr. hotel
+Banken til dig 50 i afkast for dine gode investeringer
+Du får renter fra banken, modtag 20
+Du har vundet en krydsordskonkurrence, modtag 5
+Du får penge tilbage i skat, modtag 15
+Du sælger aktier, modtag 20
+Operaaften, modtag 10 fra hver spiller for billetter
+Det er din fødselsdag, modtag 15
+Din livsforsikring øges, modtag 25
+Du modtager 10 for konsulentarbejde
+Du får andenpladsen i en skønhedskonkurrence, modtag 5
+Du modtager 10 i arv
+Betal 10% af dine penge i skat
+Du bliver valgt som bestyrelsesformand betal 10 til hver spiller
+Lægeregning, betal 10
+Hospitalsregning, betal 10
+Betal uddannelsesskat 15
+Reperation af hus/hotel, betal 5 pr. hus og 10 pr. hotel
 Frikort, dette kort beholdes og kan anvendes til at komme ud af fængslet
-Gå direkte i fængsel, du får ikke (insert amount) for at passere start
+Gå direkte i fængsel, du får ikke 100 for at passere start
 Du har ikke nok penge
 Vil du sælge dine huse/hoteller
 Vil du pantsætte dine ejendomme
