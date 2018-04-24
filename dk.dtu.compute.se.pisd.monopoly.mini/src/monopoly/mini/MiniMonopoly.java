@@ -38,7 +38,7 @@ public class MiniMonopoly {
 		// could actually be loaded from a file or database instead
 		// of creating it programmatically.
 		Game game = new Game();
-	//Hvis tid, double-check navnene.@Elisa
+	//Implementering af felterne @Elisa
 		String [] guiMessages = ReadText.file("fields.txt");
 		
 		
@@ -240,12 +240,10 @@ public class MiniMonopoly {
 		h.setRent(20);
 		game.addSpace(h);
 		
-<<<<<<< HEAD
-=======
+
 		chance = new Chance();
 		chance.setName(guiMessages[36]);
 		game.addSpace(chance);
->>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 		
 		p = new Property();
 		p.setName(guiMessages[37]);
