@@ -118,13 +118,12 @@ public class GameController {
 			}
 			
 			p.setCurrentPosition(game.getSpaces().get(0));
-<<<<<<< HEAD
+
 			p.setColor(Color.cyan);
 			game.addPlayer(p);
-=======
+
 			
 			game.addPlayer(p);	
->>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly
 		}
 			
 	
