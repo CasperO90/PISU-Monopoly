@@ -30,7 +30,7 @@ public class CardMoveSpaces extends Card{
 			super.doAction(controller, player);
 		}
 	}	
-	
+	adsa
 	
 
 }
