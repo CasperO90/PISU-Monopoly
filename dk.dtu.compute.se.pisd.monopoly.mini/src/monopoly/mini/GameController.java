@@ -97,8 +97,8 @@ public class GameController {
 			Player p = new Player();
 			p.setName(playerName);
 			p.setCurrentPosition(game.getSpaces().get(0));
-			p.setColor(Color.RED);
-			game.addPlayer(p);	
+			p.setColor(Color.cyan);
+			game.addPlayer(p);
 		}
 			
 	
