@@ -84,9 +84,7 @@ public class GameController {
 	public void createPlayers() {
 		// TODO the players should be created interactively // getuserstring(gui)
 		
-<<<<<<< HEAD
-		
-=======
+
 		Player[] Players = new Player[amountOfPlayers];
 		GUI_Player[] GUI_Players = new GUI_Player[amountOfPlayers];
 		amountOfPlayers = gui.getUserInteger("Antal spillere", 2,6 );
@@ -98,8 +96,7 @@ public class GameController {
 		
 		Player player = new Player(playerName, balance , currentPosition);
 	}
->>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly
-		
+
 		
 		
 		/*Player p = new Player();
