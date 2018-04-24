@@ -1,6 +1,8 @@
 Velkommen til Monopoly, den yngste spiller starter!
 Vælg antal spillere
+Spiller 
 , vælg dit navn
+ Vælg farve
 , klik til at kaste med terningerne
 Grunden er ejet
 betal (insert amount) til 
@@ -44,7 +46,12 @@ Du har ikke nok penge
 Vil du sælge dine huse/hoteller
 Vil du pantsætte dine ejendomme
 Du har tabt
-
+Rød
+Grøn
+Blå
+Gul
+Grå
+Sort
 
 
 
