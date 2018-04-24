@@ -7,6 +7,7 @@ import monopoly.mini.model.Card;
 import monopoly.mini.model.Chance;
 import monopoly.mini.model.Game;
 import monopoly.mini.model.Property;
+import monopoly.mini.model.ReadText;
 import monopoly.mini.model.Space;
 import monopoly.mini.model.Tax;
 import monopoly.mini.model.cards.CardMoveToSpace;
@@ -29,6 +30,7 @@ public class MiniMonopoly {
 	 * 
 	 * @return the initial game board and (not shuffled) deck of chance cards 
 	 */
+	
 	public static Game createGame() {
 
 		// Create the initial Game set up (note that, in this simple
@@ -36,86 +38,234 @@ public class MiniMonopoly {
 		// could actually be loaded from a file or database instead
 		// of creating it programmatically.
 		Game game = new Game();
+	//Alle 40 felter, lavet på den samme måde som ekkarts men med guiMessage i stedet for navn, vi ser om det virker :))
+		String [] guiMessages = ReadText.file("fields.txt");
+		
 		
 		Space go = new Space();
-		go.setName("Go");
+		go.setName(guiMessages[0]);
 		game.addSpace(go);
 		
 		Property p = new Property();
-		p.setName("R�dovrevej");
-		p.setCost(1200);
-		p.setRent(50);
+		p.setName(guiMessages[1]);
+		p.setCost(60);
+		p.setRent(5);
 		game.addSpace(p);
 		
 		Chance chance = new Chance();
-		chance.setName("Chance");
+		chance.setName(guiMessages[2]);
 		game.addSpace(chance);
 		
 		p = new Property();
-		p.setName("Hvidovrevej");
-		p.setCost(1200);
-		p.setRent(50);
+		p.setName(guiMessages[3]);
+		p.setCost(60);
+		p.setRent(5);
 		game.addSpace(p);
 		
 		Tax t = new Tax();
-		t.setName("Pay tax (10% on Cash)");
+		t.setName(guiMessages[4]);
 		game.addSpace(t);
 
 		Utility s = new Utility();
-		s.setName("�resund");
-		s.setCost(4000);
-		s.setRent(500);
+		s.setName(guiMessages[5]);
+		s.setCost(200);
+		s.setRent(20);
 		game.addSpace(s);
 
 		p = new Property();
-		p.setName("Roskildevej");
-		p.setCost(2000);
-		p.setRent(100);
+		p.setName(guiMessages[6]);
+		p.setCost(100);
+		p.setRent(10);
 		game.addSpace(p);
 		
 		chance = new Chance();
-		chance.setName("Chance");
+		chance.setName(guiMessages[7]);
 		game.addSpace(chance);
 		
 		p = new Property();
-		p.setName("Valby Langgade");
-		p.setCost(2000);
-		p.setRent(100);
+		p.setName(guiMessages[8]);
+		p.setCost(100);
+		p.setRent(10);
 		game.addSpace(p);
 		
 		p = new Property();
-		p.setName("All�gade");
-		p.setCost(2400);
-		p.setRent(150);
+		p.setName(guiMessages[9]);
+		p.setCost(120);
+		p.setRent(12);
 		game.addSpace(p);
 		
 		Space prison = new Space();
-		prison.setName("Prison");
+		prison.setName(guiMessages[10]);
 		game.addSpace(prison);
 		
 		p = new Property();
-		p.setName("Frederiksberg All�");
-		p.setCost(2800);
-		p.setRent(200);
+		p.setName(guiMessages[11]);
+		p.setCost(140);
+		p.setRent(14);
 		game.addSpace(p);
 		
 		p = new Property();
-		p.setName("Coca-Cola Tapperi");
-		p.setCost(3000);
-		p.setRent(300);
+		p.setName(guiMessages[13]);
+		p.setCost(140);
+		p.setRent(14);
+		game.addSpace(p);
+		
+		Utility k = new Utility();
+		k.setName(guiMessages[12]);
+		k.setCost(150);
+		k.setRent(15);
+		game.addSpace(k);
+		
+		p = new Property();
+		p.setName(guiMessages[14]);
+		p.setCost(160);
+		p.setRent(16);
+		game.addSpace(p);
+		
+		Utility l = new Utility();
+		l.setName(guiMessages[15]);
+		l.setCost(200);
+		l.setRent(20);
+		game.addSpace(l);
+		
+		p = new Property();
+		p.setName(guiMessages[16]);
+		p.setCost(180);
+		p.setRent(18);
+		game.addSpace(p);
+		
+		chance = new Chance();
+		chance.setName(guiMessages[17]);
+		game.addSpace(chance);
+		
+		p = new Property();
+		p.setName(guiMessages[18]);
+		p.setCost(180);
+		p.setRent(18);
+		game.addSpace(p);
+		
+		
+		p = new Property();
+		p.setName(guiMessages[19]);
+		p.setCost(200);
+		p.setRent(20);
+		game.addSpace(p);
+		
+		Space parking = new Space();
+		parking.setName(guiMessages[20]);
+		game.addSpace(parking);
+		
+		p = new Property();
+		p.setName(guiMessages[21]);
+		game.addSpace(p);
+		p.setCost(220);
+		p.setRent(22);
+		
+		
+		chance = new Chance();
+		chance.setName(guiMessages[22]);
+		game.addSpace(chance);
+		
+		p = new Property();
+		p.setName(guiMessages[23]);
+		p.setCost(220);
+		p.setRent(22);
 		game.addSpace(p);
 		
 		p = new Property();
-		p.setName("B�lowsvej");
-		p.setCost(2800);
-		p.setRent(200);
+		p.setName(guiMessages[24]);
+		p.setCost(240);
+		p.setRent(24);
+		game.addSpace(p);
+		
+		Utility m = new Utility();
+		m.setName(guiMessages[25]);
+		m.setCost(200);
+		m.setRent(20);
+		game.addSpace(m);
+		
+		p = new Property();
+		p.setName(guiMessages[26]);
+		p.setCost(260);
+		p.setRent(26);
 		game.addSpace(p);
 		
 		p = new Property();
-		p.setName("Gl. Kongevej");
-		p.setCost(3200);
-		p.setRent(250);
+		p.setName(guiMessages[27]);
+		p.setCost(260);
+		p.setRent(26);
 		game.addSpace(p);
+		
+		Utility n = new Utility();
+		n.setName(guiMessages[28]);
+		n.setCost(150);
+		n.setRent(15);
+		game.addSpace(n);
+		
+		p = new Property();
+		p.setName(guiMessages[29]);
+		p.setCost(280);
+		p.setRent(28);
+		game.addSpace(p);
+		
+		Space goToPrison = new Space();
+		goToPrison.setName(guiMessages[30]);
+		game.addSpace(goToPrison);
+		
+		p = new Property();
+		p.setName(guiMessages[31]);
+		p.setCost(300);
+		p.setRent(30);
+		game.addSpace(p);
+		
+		p = new Property();
+		p.setName(guiMessages[32]);
+		p.setCost(300);
+		p.setRent(30);
+		game.addSpace(p);
+		
+		chance = new Chance();
+		chance.setName(guiMessages[33]);
+		game.addSpace(chance);
+		
+		p = new Property();
+		p.setName(guiMessages[34]);
+		p.setCost(320);
+		p.setRent(32);
+		game.addSpace(p);
+		
+		Utility h = new Utility();
+		h.setName(guiMessages[35]);
+		h.setCost(200);
+		h.setRent(20);
+		game.addSpace(h);
+		
+		p = new Property();
+		p.setName(guiMessages[36]);
+		p.setCost(360);
+		p.setRent(36);
+		game.addSpace(p);
+		
+		Tax t2 = new Tax();
+		t2.setName(guiMessages[37]);
+		game.addSpace(t2);
+		
+		p = new Property();
+		p.setName(guiMessages[38]);
+		p.setCost(400);
+		p.setRent(40);
+		game.addSpace(p);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//Chancekort, mangler
 		
 		List<Card> cards = new ArrayList<Card>();
 		
@@ -133,6 +283,8 @@ public class MiniMonopoly {
 		b.setAmount(100);
 		cards.add(b);
 		game.setCardDeck(cards);
+		
+		
 
 		return game;
 	}
