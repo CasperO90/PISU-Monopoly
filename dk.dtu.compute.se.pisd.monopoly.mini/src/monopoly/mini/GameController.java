@@ -90,11 +90,20 @@ public class GameController {
 		amountOfPlayers = gui.getUserInteger("Antal spillere", 2,6 );
 		int j=0; 
 		
-		for (int i=0; i<amountOfPlayers; i++)
-		j++;
-		String playerName = gui.getUserString("Spiller"+ j + "Vælg dit navn");
+		for (int i=0; i<amountOfPlayers; i++) {
+		j++; 
 		
-		Player player = new Player(playerName, balance , currentPosition);
+			String playerName = gui.getUserString("Spiller"+ j + "Vælg dit navn");
+			Player p = new Player();
+			p.setName(playerName);
+			p.setCurrentPosition(game.getSpaces().get(0));
+			p.setColor(Color.RED);
+			game.addPlayer(p);	
+		}
+			
+	
+		
+		//Player player = new Player(playerName, balance , currentPosition); Construktoren findes ikke
 	}
 
 		
