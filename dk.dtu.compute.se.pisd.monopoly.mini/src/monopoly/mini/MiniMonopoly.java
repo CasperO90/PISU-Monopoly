@@ -49,7 +49,7 @@ public class MiniMonopoly {
 		Property p = new Property();
 		p.setName(guiMessages[1]);
 		p.setCost(60);
-		p.setRent(?);
+		p.setRent(5);
 		game.addSpace(p);
 		
 		Chance chance = new Chance();
@@ -59,7 +59,7 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[3]);
 		p.setCost(60);
-		p.setRent(?);
+		p.setRent(5);
 		game.addSpace(p);
 		
 		Tax t = new Tax();
@@ -69,13 +69,13 @@ public class MiniMonopoly {
 		Utility s = new Utility();
 		s.setName(guiMessages[5]);
 		s.setCost(200);
-		s.setRent(?);
+		s.setRent(20);
 		game.addSpace(s);
 
 		p = new Property();
 		p.setName(guiMessages[6]);
 		p.setCost(100);
-		p.setRent(?);
+		p.setRent(10);
 		game.addSpace(p);
 		
 		chance = new Chance();
@@ -85,13 +85,13 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[8]);
 		p.setCost(100);
-		p.setRent(?);
+		p.setRent(10);
 		game.addSpace(p);
 		
 		p = new Property();
 		p.setName(guiMessages[9]);
 		p.setCost(120);
-		p.setRent(?);
+		p.setRent(12);
 		game.addSpace(p);
 		
 		Space prison = new Space();
@@ -101,37 +101,37 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[11]);
 		p.setCost(140);
-		p.setRent(?);
+		p.setRent(14);
 		game.addSpace(p);
 		
 		p = new Property();
 		p.setName(guiMessages[13]);
 		p.setCost(140);
-		p.setRent(?);
+		p.setRent(14);
 		game.addSpace(p);
 		
 		Utility k = new Utility();
 		k.setName(guiMessages[12]);
 		k.setCost(150);
-		k.setRent(?);
+		k.setRent(15);
 		game.addSpace(k);
 		
 		p = new Property();
 		p.setName(guiMessages[14]);
 		p.setCost(160);
-		p.setRent(?);
+		p.setRent(16);
 		game.addSpace(p);
 		
 		Utility l = new Utility();
 		l.setName(guiMessages[15]);
 		l.setCost(200);
-		l.setRent(?);
+		l.setRent(20);
 		game.addSpace(l);
 		
 		p = new Property();
 		p.setName(guiMessages[16]);
 		p.setCost(180);
-		p.setRent(?);
+		p.setRent(18);
 		game.addSpace(p);
 		
 		chance = new Chance();
@@ -141,14 +141,14 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[18]);
 		p.setCost(180);
-		p.setRent(?);
+		p.setRent(18);
 		game.addSpace(p);
 		
 		
 		p = new Property();
 		p.setName(guiMessages[19]);
 		p.setCost(200);
-		p.setRent(?);
+		p.setRent(20);
 		game.addSpace(p);
 		
 		Space parking = new Space();
@@ -159,7 +159,7 @@ public class MiniMonopoly {
 		p.setName(guiMessages[21]);
 		game.addSpace(p);
 		p.setCost(220);
-		p.setRent(?);
+		p.setRent(22);
 		
 		
 		chance = new Chance();
@@ -169,43 +169,43 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[23]);
 		p.setCost(220);
-		p.setRent(?);
+		p.setRent(22);
 		game.addSpace(p);
 		
 		p = new Property();
 		p.setName(guiMessages[24]);
 		p.setCost(240);
-		p.setRent(?);
+		p.setRent(24);
 		game.addSpace(p);
 		
 		Utility m = new Utility();
 		m.setName(guiMessages[25]);
 		m.setCost(200);
-		m.setRent(?);
+		m.setRent(20);
 		game.addSpace(m);
 		
 		p = new Property();
 		p.setName(guiMessages[26]);
 		p.setCost(260);
-		p.setRent(?);
+		p.setRent(26);
 		game.addSpace(p);
 		
 		p = new Property();
 		p.setName(guiMessages[27]);
 		p.setCost(260);
-		p.setRent(?);
+		p.setRent(26);
 		game.addSpace(p);
 		
 		Utility n = new Utility();
 		n.setName(guiMessages[28]);
 		n.setCost(150);
-		n.setRent(?);
+		n.setRent(15);
 		game.addSpace(n);
 		
 		p = new Property();
 		p.setName(guiMessages[29]);
 		p.setCost(280);
-		p.setRent(?);
+		p.setRent(28);
 		game.addSpace(p);
 		
 		Space goToPrison = new Space();
@@ -215,13 +215,13 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[31]);
 		p.setCost(300);
-		p.setRent(?);
+		p.setRent(30);
 		game.addSpace(p);
 		
 		p = new Property();
 		p.setName(guiMessages[32]);
 		p.setCost(300);
-		p.setRent(?);
+		p.setRent(30);
 		game.addSpace(p);
 		
 		chance = new Chance();
@@ -231,19 +231,19 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[34]);
 		p.setCost(320);
-		p.setRent(?);
+		p.setRent(32);
 		game.addSpace(p);
 		
 		Utility h = new Utility();
 		h.setName(guiMessages[35]);
 		h.setCost(200);
-		h.setRent(?);
+		h.setRent(20);
 		game.addSpace(h);
 		
 		p = new Property();
 		p.setName(guiMessages[36]);
 		p.setCost(360);
-		p.setRent(?);
+		p.setRent(36);
 		game.addSpace(p);
 		
 		Tax t2 = new Tax();
@@ -253,7 +253,7 @@ public class MiniMonopoly {
 		p = new Property();
 		p.setName(guiMessages[38]);
 		p.setCost(400);
-		p.setRent(?);
+		p.setRent(40);
 		game.addSpace(p);
 		
 		

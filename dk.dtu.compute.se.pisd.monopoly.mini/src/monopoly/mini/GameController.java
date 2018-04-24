@@ -117,6 +117,7 @@ public class GameController {
 				
 			}
 			
+			
 			p.setCurrentPosition(game.getSpaces().get(0));
 			
 			game.addPlayer(p);	
