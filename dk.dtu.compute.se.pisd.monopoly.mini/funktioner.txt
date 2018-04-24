@@ -1,5 +1,5 @@
 Velkommen til Monopoly, den yngste spiller starter!
-Vælg antal spillere?
+Vælg antal spillere
 , vælg dit navn
 , klik til at kaste med terningerne
 Grunden er ejet
