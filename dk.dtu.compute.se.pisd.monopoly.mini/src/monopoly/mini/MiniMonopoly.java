@@ -240,19 +240,25 @@ public class MiniMonopoly {
 		h.setRent(20);
 		game.addSpace(h);
 		
+<<<<<<< HEAD
+=======
+		chance = new Chance();
+		chance.setName(guiMessages[36]);
+		game.addSpace(chance);
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 		
 		p = new Property();
-		p.setName(guiMessages[36]);
+		p.setName(guiMessages[37]);
 		p.setCost(360);
 		p.setRent(36);
 		game.addSpace(p);
 		
 		Tax t2 = new Tax();
-		t2.setName(guiMessages[37]);
+		t2.setName(guiMessages[38]);
 		game.addSpace(t2);
 		
 		p = new Property();
-		p.setName(guiMessages[38]);
+		p.setName(guiMessages[39]);
 		p.setCost(400);
 		p.setRent(40);
 		game.addSpace(p);
@@ -266,7 +272,9 @@ public class MiniMonopoly {
 		
 		
 		
-		//Chancekort, mangler
+		//Chancekort - @Elisa, Casper d. 24/04
+		// MoveToSpace er implementeret
+		
 		
 		List<Card> cards = new ArrayList<Card>();
 		
@@ -274,6 +282,53 @@ public class MiniMonopoly {
 		move.setTarget(game.getSpaces().get(9));
 		move.setText("Move to All�gade!");
 		cards.add(move);
+		
+		
+		
+		
+		CardMoveToSpace move2 = new CardMoveToSpace();
+		move.setTarget(game.getSpaces().get(39));
+		move.setText("Move to Rådhuspladsen!");
+		cards.add(move2);
+		
+		
+		
+		CardMoveToSpace move3 = new CardMoveToSpace();
+		move3.setTarget(game.getSpaces().get(12));
+		move3.setText("Move to Tuborg!");
+		cards.add(move3);
+		
+		
+		CardMoveToSpace move4 = new CardMoveToSpace();
+		move4.setTarget(game.getSpaces().get(28));
+		move4.setText("Move to Carlsberg!");
+		cards.add(move4);
+		
+		CardMoveToSpace move5 = new CardMoveToSpace();
+		move5.setTarget(game.getSpaces().get(35));
+		move5.setText("Move to Bornholmsredderiet!");
+		cards.add(move5);
+		
+		CardMoveToSpace move6 = new CardMoveToSpace();
+		move6.setTarget(game.getSpaces().get(5));
+		move6.setText("Move to Øresundsredderiet!");
+		cards.add(move6);
+		
+		CardMoveToSpace move7 = new CardMoveToSpace();
+		move7.setTarget(game.getSpaces().get(15));
+		move7.setText("Move to D.F.D.S!");
+		cards.add(move7);
+		
+		CardMoveToSpace move8 = new CardMoveToSpace();
+		move8.setTarget(game.getSpaces().get(25));
+		move8.setText("Move to Ø.S redderiet!");
+		cards.add(move8);
+		
+		CardMoveToSpace move9 = new CardMoveToSpace();
+		move9.setTarget(game.getSpaces().get(0));
+		move9.setText("Move to START!");
+		cards.add(move9);
+		
 		
 		PayTax tax = new PayTax();
 		tax.setText("Pay 10% income tax!");
@@ -284,6 +339,7 @@ public class MiniMonopoly {
 		b.setAmount(100);
 		cards.add(b);
 		game.setCardDeck(cards);
+		
 		
 		
 

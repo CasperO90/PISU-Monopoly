@@ -1,7 +1,7 @@
 package monopoly.mini;
 
 import java.awt.Color;
-
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -360,7 +360,41 @@ public class GameController {
 	 */
 	public void obtainCash(Player player, int amount) {
 		// TODO implement
-	}
+		String choice = gui.getUserSelection(
+				"Player " + player.getName() +
+				": Do you want to sell property " + property.getName() +
+				" for " + property.getMortgage() + "$?",
+				"yes",
+				"no");
+		if (choice.equals("yes")) {
+			List<Property> list = new ArrayList<Property> ();
+			for (Space space: game.getSpaces()) {
+				if (space instanceof Property) {
+					Property property = (Property) space;
+					if(player.equals (property.getOwner())) {
+						list.add(property);
+
+					}
+
+				}
+			}
+			
+			if (!list.isEmpty()) {
+				String choice1 = gui.getUserString(
+						"Player " + player.getName() + 
+						": Which property do you want to sell this property " + player.getOwnedProperties();
+						+ 
+					
+						)
+			}
+			
+			//receiveMoney(player, property.getMortgage());
+
+
+
+		}	
+		}
+	
 	
 	/**
 	 * This method implements the activity of offering a player to buy
