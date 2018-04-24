@@ -240,6 +240,7 @@ public class MiniMonopoly {
 		h.setRent(20);
 		game.addSpace(h);
 		
+		
 		p = new Property();
 		p.setName(guiMessages[36]);
 		p.setCost(360);
