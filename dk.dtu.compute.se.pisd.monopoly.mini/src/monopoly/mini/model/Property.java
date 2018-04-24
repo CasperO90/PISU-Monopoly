@@ -13,6 +13,7 @@ public class Property extends Space {
 	
 	private int cost;
 	private int rent;
+	private int mortgage;
 	
 	private Player owner;
 	
@@ -26,6 +27,16 @@ public class Property extends Space {
 		return cost;
 	}
 
+	public int getMortgage() {
+		int b = cost - 100;
+		this.cost = mortgage - b;
+		return mortgage;
+	}
+	
+	public void setMortgage(int mortgage) {
+		this.mortgage = mortgage;
+		notifyChange();
+	}
 	/**
 	 * Sets the cost of this property.
 	 * 
