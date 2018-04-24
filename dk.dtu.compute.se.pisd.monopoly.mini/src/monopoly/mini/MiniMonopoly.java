@@ -38,7 +38,7 @@ public class MiniMonopoly {
 		// could actually be loaded from a file or database instead
 		// of creating it programmatically.
 		Game game = new Game();
-	//Alle 40 felter, lavet på den samme måde som ekkarts men med guiMessage i stedet for navn, vi ser om det virker :))
+	//Hvis tid, double-check navnene.@Elisa
 		String [] guiMessages = ReadText.file("fields.txt");
 		
 		

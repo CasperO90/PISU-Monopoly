@@ -13,7 +13,7 @@ NEJ
 Du har passeret start, du før (insert amount)
 Gå til start
 Gå 3 felter tilbage
-Gå til, , hvis du passerer start får du (insert amount)
+Gå til Allegade, hvis du passerer start får du (insert amount)
 Gå til nærmeste grund 
 Gå til Rådhuspladsen 
 Gå til nærmeste rederi
