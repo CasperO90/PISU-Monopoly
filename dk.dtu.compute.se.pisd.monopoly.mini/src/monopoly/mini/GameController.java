@@ -79,7 +79,7 @@ public class GameController {
 	public void createPlayers() {
 		// TODO the players should be created interactively // getuserstring(gui)
 		
-		int 
+		
 		
 		
 		
