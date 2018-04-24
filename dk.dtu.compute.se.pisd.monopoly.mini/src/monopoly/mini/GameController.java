@@ -11,6 +11,7 @@ import monopoly.mini.model.Card;
 import monopoly.mini.model.Game;
 import monopoly.mini.model.Player;
 import monopoly.mini.model.Property;
+import monopoly.mini.model.ReadText;
 import monopoly.mini.model.Space;
 import monopoly.mini.model.exceptions.PlayerBrokeException;
 
@@ -57,7 +58,7 @@ public class GameController {
     
     private int amountOfPlayers; 
     
-    private Player [] players;
+    String[] guiMessages = ReadText.file("funktioner.txt");
     
   
     
@@ -82,28 +83,53 @@ public class GameController {
 	 * the user.
 	 */
 	public void createPlayers() {
-		// TODO the players should be created interactively // getuserstring(gui)
+
 		
 
-		Player[] Players = new Player[amountOfPlayers];
-		GUI_Player[] GUI_Players = new GUI_Player[amountOfPlayers];
-		amountOfPlayers = gui.getUserInteger("Antal spillere", 2,6 );
+		
+		amountOfPlayers = gui.getUserInteger(guiMessages[1], 2,6 );
 		int j=0; 
 		
 		for (int i=0; i<amountOfPlayers; i++) {
 		j++; 
 		
-			String playerName = gui.getUserString("Spiller"+ j + "Vælg dit navn");
+			String playerName = gui.getUserString(guiMessages[2]+ j + guiMessages[3]);
 			Player p = new Player();
 			p.setName(playerName);
+			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[48], guiMessages[49], guiMessages[50], guiMessages[51],guiMessages[52],guiMessages[53]);
+			if (farve == guiMessages[48]) {
+				p.setColor(Color.RED);
+			}
+			if (farve == guiMessages[49]) {
+				p.setColor(Color.GREEN);
+			}
+			if (farve == guiMessages[50]) {
+				p.setColor(Color.BLUE);
+			}
+			if (farve == guiMessages[51]) {
+				p.setColor(Color.YELLOW);
+			}
+			if (farve == guiMessages[52]) {
+				p.setColor(Color.GRAY);
+			}
+			if (farve == guiMessages[53]) {
+				p.setColor(Color.BLACK);
+				
+			}
+			
 			p.setCurrentPosition(game.getSpaces().get(0));
+<<<<<<< HEAD
 			p.setColor(Color.cyan);
 			game.addPlayer(p);
+=======
+			
+			game.addPlayer(p);	
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly
 		}
 			
 	
 		
-		//Player player = new Player(playerName, balance , currentPosition); Construktoren findes ikke
+
 	}
 
 		
