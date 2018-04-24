@@ -118,10 +118,6 @@ public class GameController {
 			}
 			
 			p.setCurrentPosition(game.getSpaces().get(0));
-
-			p.setColor(Color.cyan);
-			game.addPlayer(p);
-
 			
 			game.addPlayer(p);	
 		}
