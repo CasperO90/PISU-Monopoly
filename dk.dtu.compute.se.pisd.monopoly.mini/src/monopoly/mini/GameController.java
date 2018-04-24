@@ -1,8 +1,11 @@
 package monopoly.mini;
 
 import java.awt.Color;
+
 import java.util.List;
 
+
+import gui_fields.GUI_Player;
 import gui_main.GUI;
 import monopoly.mini.model.Card;
 import monopoly.mini.model.Game;
@@ -52,9 +55,11 @@ public class GameController {
 	
     private boolean disposed = false;
     
-    private int amountofplayers; 
+    private int amountOfPlayers; 
     
     private Player [] players;
+    
+  
     
     
 	
@@ -79,11 +84,21 @@ public class GameController {
 	public void createPlayers() {
 		// TODO the players should be created interactively // getuserstring(gui)
 		
-		int 
+		Player[] Players = new Player[amountOfPlayers];
+		GUI_Player[] GUI_Players = new GUI_Player[amountOfPlayers];
+		amountOfPlayers = gui.getUserInteger("Antal spillere", 2,6 );
+		int j=0; 
+		
+		for (int i=0; i<amountOfPlayers; i++)
+		j++;
+		String playerName = gui.getUserString("Spiller"+ j + "Vælg dit navn");
+		
+		Player player = new Player(playerName, balance , currentPosition);
+	}
 		
 		
 		
-		Player p = new Player();
+		/*Player p = new Player();
 		p.setName("Player 1");
 		p.setCurrentPosition(game.getSpaces().get(0));
 		p.setColor(Color.RED);

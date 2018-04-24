@@ -38,6 +38,8 @@ public class Player extends Subject {
 	
 	private List<Card> ownedCards = new ArrayList<Card>();
 
+	
+
 	/**
 	 * Returns the name of the player.
 	 * 
