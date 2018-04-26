@@ -298,8 +298,8 @@ public class GameController {
 			// Note that this assumes that the game has more than 12 spaces here!
 			// TODO: the amount of 2000$ should not be a fixed constant here (could also
 			//       be configured in the Game class.
-			gui.showMessage("Player " + player.getName() + " receives 2000$ for passing Go!");
-			this.paymentFromBank(player, 2000);
+			gui.showMessage("Player " + player.getName() + " receives 200$ for passing Go!");
+			this.paymentFromBank(player, 200);
 		}		
 		gui.showMessage("Player " + player.getName() + " arrives at " + space.getIndex() + ": " +  space.getName() + ".");
 		
