@@ -47,23 +47,23 @@ import monopoly.mini.model.exceptions.PlayerBrokeException;
  *
  */
 public class GameController {
-	
+
 	private Game game;
-	
+
 	private GUI gui;
-	
+
 	private View view;
-	
-    private boolean disposed = false;
-    
-    private int amountOfPlayers; 
-    
-    String[] guiMessages = ReadText.file("funktioner.txt");
-    
-  
-    
-    
-	
+
+	private boolean disposed = false;
+
+	private int amountOfPlayers; 
+
+	String[] guiMessages = ReadText.file("funktioner.txt");
+
+
+
+
+
 	/**
 	 * Constructor for a controller of a game.
 	 * 
@@ -72,10 +72,10 @@ public class GameController {
 	public GameController(Game game) {
 		super();
 		this.game = game;
-		
+
 		gui = new GUI();
 	}
-	
+
 	/**
 	 * This method will be called when the game is started to create
 	 * the participating players. Right now, the creation of players
@@ -84,71 +84,71 @@ public class GameController {
 	 */
 	public void createPlayers() {
 
-		
 
-		
+
+
 		amountOfPlayers = gui.getUserInteger(guiMessages[1], 2,6 );
 		int j=0; 
-		
+
 		for (int i=0; i<amountOfPlayers; i++) {
-		j++; 
-		
+			j++; 
+
 			String playerName = gui.getUserString(guiMessages[2]+ j + guiMessages[3]);
 			Player p = new Player();
 			p.setName(playerName);
 			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[48], guiMessages[49], guiMessages[50], guiMessages[51],guiMessages[52],guiMessages[53]);
-			if (farve == guiMessages[48]) {
+			if (farve == guiMessages[51]) {
 				p.setColor(Color.RED);
 			}
-			if (farve == guiMessages[49]) {
+			if (farve == guiMessages[52]) {
 				p.setColor(Color.GREEN);
 			}
-			if (farve == guiMessages[50]) {
+			if (farve == guiMessages[53]) {
 				p.setColor(Color.BLUE);
 			}
-			if (farve == guiMessages[51]) {
+			if (farve == guiMessages[54]) {
 				p.setColor(Color.YELLOW);
 			}
-			if (farve == guiMessages[52]) {
+			if (farve == guiMessages[55]) {
 				p.setColor(Color.GRAY);
 			}
-			if (farve == guiMessages[53]) {
+			if (farve == guiMessages[56]) {
 				p.setColor(Color.BLACK);
-				
+
 			}
-			
-			
+
+
 			p.setCurrentPosition(game.getSpaces().get(0));
-			
+
 			game.addPlayer(p);	
 		}
-			
-	
-		
+
+
+
 
 	}
 
-		
-		
-		/*Player p = new Player();
+
+
+	/*Player p = new Player();
 		p.setName("Player 1");
 		p.setCurrentPosition(game.getSpaces().get(0));
 		p.setColor(Color.RED);
 		game.addPlayer(p);
-		
+
 		p = new Player();
 		p.setName("Player 2");
 		p.setCurrentPosition(game.getSpaces().get(0));
 		p.setColor(Color.YELLOW);
 		game.addPlayer(p);
-		
+
 		p = new Player();
 		p.setName("Player 3");
 		p.setCurrentPosition(game.getSpaces().get(0));
 		p.setColor(Color.GREEN);
 		game.addPlayer(p);
 	}
-	
+
 	/**
 	 * This method will initialize the GUI. It should be called after
 	 * the players of the game are created. As of now, the initialization
@@ -159,7 +159,7 @@ public class GameController {
 	public void initializeGUI() {		
 		this. view = new View(game, gui);
 	}
-	
+
 	/**
 	 * The main method to start the game with the given player.
 	 * The game is started with the current player of the game;
@@ -168,7 +168,7 @@ public class GameController {
 	public void play() {
 		List<Player> players =  game.getPlayers();
 		Player c = game.getCurrentPlayer();
-		
+
 		int current = 0;
 		for (int i=0; i<players.size(); i++) {
 			Player p = players.get(i);
@@ -176,7 +176,7 @@ public class GameController {
 				current = i;
 			}
 		}
-		
+
 		boolean terminated = false;
 		while (!terminated) {
 			Player player = players.get(current);
@@ -187,7 +187,7 @@ public class GameController {
 					// We could react to the player having gone broke
 				}
 			}
-			
+
 			// Check whether we have a winner
 			Player winner = null;
 			int countActive = 0;
@@ -210,7 +210,7 @@ public class GameController {
 				gui.showMessage(
 						"All players are broke.");
 				break;
-				
+
 			}
 
 			// TODO offer all players the options to trade etc.
@@ -227,7 +227,7 @@ public class GameController {
 				}
 			}
 		}
-		
+
 		dispose();
 	}
 
@@ -250,15 +250,27 @@ public class GameController {
 			int die2 = (int) (1 + 3.0*Math.random());
 			castDouble = (die1 == die2);
 			gui.setDice(die1, die2);
-			
+
 			if (player.isInPrison() && castDouble) {
 				player.setInPrison(false);
 				gui.showMessage("Player " + player.getName() + " leaves prison now since he cast a double!");
 			} else if (player.isInPrison()) {
-				gui.showMessage("Player " + player.getName() + " stays in prison since he did not cast a double!");
+				String choice = gui.getUserSelection(
+						"Player " + player.getName() +
+						": Do you want to buy you out of prison " +
+						" for 50 $?",
+						"yes",
+						"no");
+
+				if (choice.equals("yes")) {
+					player.payMoney(50);
+					player.setInPrison(false);
+					gui.showMessage("Player " + player.getName() + " breaking free!");
+				}
+				else {
+					gui.showMessage("Player " + player.getName() + " stays in prison since he did not cast a double and payed!");
+				}
 			}
-			// TODO note that the player could also pay to get out of prison,
-			//      which is not yet implemented 
 			if (castDouble) {
 				doublesCount++;
 				if (doublesCount > 2) {
@@ -281,7 +293,7 @@ public class GameController {
 			}
 		} while (castDouble);
 	}
-	
+
 	/**
 	 * This method implements the activity of moving the player to the new position,
 	 * including all actions associated with moving the player to the new position.
@@ -302,7 +314,7 @@ public class GameController {
 			this.paymentFromBank(player, 200);
 		}		
 		gui.showMessage("Player " + player.getName() + " arrives at " + space.getIndex() + ": " +  space.getName() + ".");
-		
+
 		// Execute the action associated with the respective space. Note
 		// that this is delegated to the field, which implements this action
 		space.doAction(this, player);
@@ -318,7 +330,7 @@ public class GameController {
 		player.setCurrentPosition(game.getSpaces().get(10));
 		player.setInPrison(true);
 	}
-	
+
 	/**
 	 * The method implementing the activity of taking a chance card.
 	 * 
@@ -336,7 +348,7 @@ public class GameController {
 			gui.displayChanceCard("done");
 		}
 	}
-	
+
 	/**
 	 * This method implements the action returning a drawn card to the
 	 * bottom of the deck.
@@ -346,7 +358,7 @@ public class GameController {
 	public void returnChanceCardToDeck(Card card) {
 		game.returnCardToDeck(card);
 	}
-	
+
 	/**
 	 * This method implements the activity where a player can obtain
 	 * cash by selling houses back to the bank, by mortgaging own properties,
@@ -360,7 +372,27 @@ public class GameController {
 	 */
 	public void obtainCash(Player player, int amount) {
 		// TODO implement
+		/*
+		if(player.isBroke()) {
 		String choice = gui.getUserSelection(
+					"Player " + player.getName() +
+					": Do you want to sell a property " +
+					"yes", 
+					"no");
+		if(choice.equals("yes")) {
+			player.receiveMoney(amount + 3000);
+			player.removeAllProperties();
+			player.setBroke(false);
+
+		}
+		else {
+			player.setBroke(true);
+		}
+
+		 */
+
+
+		/*		String choice = gui.getUserSelection(
 				"Player " + player.getName() +
 				": Do you want to sell property " + property.getName() +
 				" for " + property.getMortgage() + "$?",
@@ -378,201 +410,201 @@ public class GameController {
 
 				}
 			}
-			
+
 			if (!list.isEmpty()) {
 				String choice1 = gui.getUserString(
 						"Player " + player.getName() + 
 						": Which property do you want to sell this property " + player.getOwnedProperties();
 						+ 
-					
+
 						)
 			}
-			
+
 			//receiveMoney(player, property.getMortgage());
+		 */	
+
+
+	}	
 
 
 
-		}	
+/**
+ * This method implements the activity of offering a player to buy
+ * a property. This is typically triggered by a player arriving on
+ * an property that is not sold yet. If the player chooses not to
+ * buy, the property will be set for auction.
+ * 
+ * @param property the property to be sold
+ * @param player the player the property is offered to
+ * @throws PlayerBrokeException when the player chooses to buy but could not afford it
+ */
+public void offerToBuy(Property property, Player player) throws PlayerBrokeException {
+	// TODO We might also allow the player to obtainCash before
+	// the actual offer, to see whether he can free enough cash
+	// for the sale.
+
+	String choice = gui.getUserSelection(
+			"Player " + player.getName() +
+			": Do you want to buy " + property.getName() +
+			" for " + property.getCost() + "$?",
+			"yes",
+			"no");
+
+	if (choice.equals("yes")) {
+		try {
+			paymentToBank(player, property.getCost());
+		} catch (PlayerBrokeException e) {
+			// if the payment fails due to the player being broke,
+			// the an auction (among the other players is started
+			auction(property);
+			// then the current move is aborted by casting the
+			// PlayerBrokeException again
+			throw e;
 		}
-	
-	
-	/**
-	 * This method implements the activity of offering a player to buy
-	 * a property. This is typically triggered by a player arriving on
-	 * an property that is not sold yet. If the player chooses not to
-	 * buy, the property will be set for auction.
-	 * 
-	 * @param property the property to be sold
-	 * @param player the player the property is offered to
-	 * @throws PlayerBrokeException when the player chooses to buy but could not afford it
-	 */
-	public void offerToBuy(Property property, Player player) throws PlayerBrokeException {
-		// TODO We might also allow the player to obtainCash before
-		// the actual offer, to see whether he can free enough cash
-		// for the sale.
-	
-		String choice = gui.getUserSelection(
-				"Player " + player.getName() +
-				": Do you want to buy " + property.getName() +
-				" for " + property.getCost() + "$?",
-				"yes",
-				"no");
-
-        if (choice.equals("yes")) {
-    		try {
-    			paymentToBank(player, property.getCost());
-    		} catch (PlayerBrokeException e) {
-    			// if the payment fails due to the player being broke,
-    			// the an auction (among the other players is started
-    			auction(property);
-    			// then the current move is aborted by casting the
-    			// PlayerBrokeException again
-    			throw e;
-    		}
-    		player.addOwnedProperty(property);
-    		property.setOwner(player);
-    		return;
-        }
-        
-		// In case the player does not buy the property an auction
-        // is started
-		auction(property);
+		player.addOwnedProperty(property);
+		property.setOwner(player);
+		return;
 	}
-	
-	/**
-	 * This method implements a payment activity to another player,
-	 * which involves the player to obtain some cash on the way, in case he does
-	 * not have enough cash available to pay right away. If he cannot free
-	 * enough money in the process, the player will go bankrupt.
-	 * 
-	 * @param payer the player making the payment
-	 * @param amount the payed amount
-	 * @param receiver the beneficiary of the payment
-	 * @throws PlayerBrokeException when the payer goes broke by this payment
-	 */
-	public void payment(Player payer, int amount, Player receiver) throws PlayerBrokeException {
+
+	// In case the player does not buy the property an auction
+	// is started
+	auction(property);
+}
+
+/**
+ * This method implements a payment activity to another player,
+ * which involves the player to obtain some cash on the way, in case he does
+ * not have enough cash available to pay right away. If he cannot free
+ * enough money in the process, the player will go bankrupt.
+ * 
+ * @param payer the player making the payment
+ * @param amount the payed amount
+ * @param receiver the beneficiary of the payment
+ * @throws PlayerBrokeException when the payer goes broke by this payment
+ */
+public void payment(Player payer, int amount, Player receiver) throws PlayerBrokeException {
+	if (payer.getBalance() < amount) {
+		obtainCash(payer, amount);
 		if (payer.getBalance() < amount) {
-			obtainCash(payer, amount);
-			if (payer.getBalance() < amount) {
-				playerBrokeTo(payer,receiver);
-				throw new PlayerBrokeException(payer);
-			}
+			playerBrokeTo(payer,receiver);
+			throw new PlayerBrokeException(payer);
 		}
-		gui.showMessage("Player " + payer.getName() + " pays " +  amount + "$ to player " + receiver.getName() + ".");
-		payer.payMoney(amount);
-		receiver.receiveMoney(amount);
 	}
-	
-	/**
-	 * This method implements the action of a player receiving money from
-	 * the bank.
-	 * 
-	 * @param player the player receiving the money
-	 * @param amount the amount
-	 */
-	public void paymentFromBank(Player player, int amount) {
-		player.receiveMoney(amount);
-	}
+	gui.showMessage("Player " + payer.getName() + " pays " +  amount + "$ to player " + receiver.getName() + ".");
+	payer.payMoney(amount);
+	receiver.receiveMoney(amount);
+}
 
-	/**
-	 * This method implements the activity of a player making a payment to
-	 * the bank. Note that this might involve the player to obtain some
-	 * cash; in case he cannot free enough cash, he will go bankrupt
-	 * to the bank. 
-	 * 
-	 * @param player the player making the payment
-	 * @param amount the amount
-	 * @throws PlayerBrokeException when the player goes broke by the payment
-	 */
-	public void paymentToBank(Player player, int amount) throws PlayerBrokeException{
+/**
+ * This method implements the action of a player receiving money from
+ * the bank.
+ * 
+ * @param player the player receiving the money
+ * @param amount the amount
+ */
+public void paymentFromBank(Player player, int amount) {
+	player.receiveMoney(amount);
+}
+
+/**
+ * This method implements the activity of a player making a payment to
+ * the bank. Note that this might involve the player to obtain some
+ * cash; in case he cannot free enough cash, he will go bankrupt
+ * to the bank. 
+ * 
+ * @param player the player making the payment
+ * @param amount the amount
+ * @throws PlayerBrokeException when the player goes broke by the payment
+ */
+public void paymentToBank(Player player, int amount) throws PlayerBrokeException{
+	if (amount > player.getBalance()) {
+		obtainCash(player, amount);
 		if (amount > player.getBalance()) {
-			obtainCash(player, amount);
-			if (amount > player.getBalance()) {
-				playerBrokeToBank(player);
-				throw new PlayerBrokeException(player);
-			}
-			
+			playerBrokeToBank(player);
+			throw new PlayerBrokeException(player);
 		}
-		gui.showMessage("Player " + player.getName() + " pays " +  amount + "$ to the bank.");
-		player.payMoney(amount);
-	}
-	
-	/**
-	 * This method implements the activity of auctioning a property.
-	 * 
-	 * @param property the property which is for auction
-	 */
-	public void auction(Property property) {
-		// TODO auction needs to be implemented
-		gui.showMessage("Now, there would be an auction of " + property.getName() + ".");
-	}
-	
-	/**
-	 * Action handling the situation when one player is broke to another
-	 * player. All money and properties are the other player.
-	 *  
-	 * @param brokePlayer the broke player
-	 * @param benificiary the player who receives the money and assets
-	 */
-	public void playerBrokeTo(Player brokePlayer, Player benificiary) {
-		int amount = brokePlayer.getBalance();
-		benificiary.receiveMoney(amount);
-		brokePlayer.setBalance(0);
-		brokePlayer.setBroke(true);
 
-		// We assume here, that the broke player has already sold all his houses! But, if
-		// not, we could make sure at this point that all houses are removed from
-		// properties (properties with houses on are not supposed to be transferred, neither
-		// in a trade between players, nor when  player goes broke to another player)
-		for (Property property: brokePlayer.getOwnedProperties()) {
-			property.setOwner(benificiary);
-			benificiary.addOwnedProperty(property);
-		}	
-		brokePlayer.removeAllProperties();
-		
-		while (!brokePlayer.getOwnedCards().isEmpty()) {
-			game.returnCardToDeck(brokePlayer.getOwnedCards().get(0));
-		}
-		
-		gui.showMessage("Player " + brokePlayer.getName() + "went broke and transfered all"
-				+ "assets to " + benificiary.getName());
 	}
-	
-	/**
-	 * Action handling the situation when a player is broke to the bank.
-	 * 
-	 * @param player the broke player
-	 */
-	public void playerBrokeToBank(Player player) {
+	gui.showMessage("Player " + player.getName() + " pays " +  amount + "$ to the bank.");
+	player.payMoney(amount);
+}
 
-		player.setBalance(0);
-		player.setBroke(true);
-		
-		// TODO we also need to remove the houses and the mortgage from the properties 
+/**
+ * This method implements the activity of auctioning a property.
+ * 
+ * @param property the property which is for auction
+ */
+public void auction(Property property) {
+	// TODO auction needs to be implemented
+	gui.showMessage("Now, there would be an auction of " + property.getName() + ".");
+}
 
-		for (Property property: player.getOwnedProperties()) {
-			property.setOwner(null);
-		}
-		player.removeAllProperties();
-		
-		gui.showMessage("Player " + player.getName() + " went broke");
-		
-		while (!player.getOwnedCards().isEmpty()) {
-			game.returnCardToDeck(player.getOwnedCards().get(0));
-		}
+/**
+ * Action handling the situation when one player is broke to another
+ * player. All money and properties are the other player.
+ *  
+ * @param brokePlayer the broke player
+ * @param benificiary the player who receives the money and assets
+ */
+public void playerBrokeTo(Player brokePlayer, Player benificiary) {
+	int amount = brokePlayer.getBalance();
+	benificiary.receiveMoney(amount);
+	brokePlayer.setBalance(0);
+	brokePlayer.setBroke(true);
+
+	// We assume here, that the broke player has already sold all his houses! But, if
+	// not, we could make sure at this point that all houses are removed from
+	// properties (properties with houses on are not supposed to be transferred, neither
+	// in a trade between players, nor when  player goes broke to another player)
+	for (Property property: brokePlayer.getOwnedProperties()) {
+		property.setOwner(benificiary);
+		benificiary.addOwnedProperty(property);
+	}	
+	brokePlayer.removeAllProperties();
+
+	while (!brokePlayer.getOwnedCards().isEmpty()) {
+		game.returnCardToDeck(brokePlayer.getOwnedCards().get(0));
 	}
-	
-	/**
-	 * Method for disposing of this controller and cleaning up its resources.
-	 */
-	public void dispose() {
-		if (!disposed) {
-			disposed = true;
-			view.dispose();
-			// TODO we should also dispose of the GUI here. But this works only
-			//      for my private version on the GUI and not for the GUI currently
-			//      deployed via Maven (or other  official versions)
-		}
+
+	gui.showMessage("Player " + brokePlayer.getName() + "went broke and transfered all"
+			+ "assets to " + benificiary.getName());
+}
+
+/**
+ * Action handling the situation when a player is broke to the bank.
+ * 
+ * @param player the broke player
+ */
+public void playerBrokeToBank(Player player) {
+
+	player.setBalance(0);
+	player.setBroke(true);
+
+	// TODO we also need to remove the houses and the mortgage from the properties 
+
+	for (Property property: player.getOwnedProperties()) {
+		property.setOwner(null);
 	}
+	player.removeAllProperties();
+
+	gui.showMessage("Player " + player.getName() + " went broke");
+
+	while (!player.getOwnedCards().isEmpty()) {
+		game.returnCardToDeck(player.getOwnedCards().get(0));
+	}
+}
+
+/**
+ * Method for disposing of this controller and cleaning up its resources.
+ */
+public void dispose() {
+	if (!disposed) {
+		disposed = true;
+		view.dispose();
+		// TODO we should also dispose of the GUI here. But this works only
+		//      for my private version on the GUI and not for the GUI currently
+		//      deployed via Maven (or other  official versions)
+	}
+}
 
 }
