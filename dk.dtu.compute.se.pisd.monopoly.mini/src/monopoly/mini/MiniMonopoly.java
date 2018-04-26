@@ -11,6 +11,7 @@ import monopoly.mini.model.ReadText;
 import monopoly.mini.model.Space;
 import monopoly.mini.model.Tax;
 import monopoly.mini.model.cards.CardMoveToSpace;
+import monopoly.mini.model.cards.CardMoveSpaces;
 import monopoly.mini.model.cards.CardReceiveMoneyFromBank;
 import monopoly.mini.model.cards.CardPayMoneyToBank;
 import monopoly.mini.model.cards.PayTax;
@@ -422,6 +423,28 @@ public class MiniMonopoly {
 		p4.setAmount(20);
 		cards.add(p4);
 		game.setCardDeck(cards);
+		
+		/*
+		CardMoveToSpace move = new CardMoveToSpace();
+		move.setTarget(game.getSpaces().get(9));
+		move.setText(chancekort[17]);
+		cards.add(move);
+		
+		target.setIndex(player.getCurrentPosition().getIndex()+spaceMove);
+		
+		*/
+		
+		CardMoveSpaces moveS1 = new CardMoveSpaces();
+		moveS1.setSpaceMove(-3);
+		moveS1.setText(chancekort[16]);
+		cards.add(moveS1);
+		
+		CardMoveSpaces moveS2 = new CardMoveSpaces();
+		moveS2.setSpaceMove(+3);
+		moveS2.setText(chancekort[57]);
+		cards.add(moveS2);
+		
+		
 		
 		
 		
