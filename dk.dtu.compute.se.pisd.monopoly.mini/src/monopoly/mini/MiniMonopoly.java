@@ -279,26 +279,21 @@ public class MiniMonopoly {
 		
 		List<Card> cards = new ArrayList<Card>();
 		
-	
 		
 		CardMoveToSpace move = new CardMoveToSpace();
 		move.setTarget(game.getSpaces().get(9));
 		move.setText(chancekort[17]);
 		cards.add(move);
 		
-		
 		CardMoveToSpace move2 = new CardMoveToSpace();
 		move.setTarget(game.getSpaces().get(39));
 		move.setText(chancekort[19]);
 		cards.add(move2);
 		
-		
-		
 		CardMoveToSpace move3 = new CardMoveToSpace();
 		move3.setTarget(game.getSpaces().get(12));
 		move3.setText(chancekort[21]);
 		cards.add(move3);
-		
 		
 		CardMoveToSpace move4 = new CardMoveToSpace();
 		move4.setTarget(game.getSpaces().get(28));
@@ -334,7 +329,6 @@ public class MiniMonopoly {
 		move10.setTarget(game.getSpaces().get(10));
 		move10.setText(chancekort[45]);
 		cards.add(move10);
-		
 		
 		PayTax tax = new PayTax();
 		tax.setText("Pay 10% income tax!");
@@ -424,16 +418,6 @@ public class MiniMonopoly {
 		cards.add(p4);
 		game.setCardDeck(cards);
 		
-		/*
-		CardMoveToSpace move = new CardMoveToSpace();
-		move.setTarget(game.getSpaces().get(9));
-		move.setText(chancekort[17]);
-		cards.add(move);
-		
-		target.setIndex(player.getCurrentPosition().getIndex()+spaceMove);
-		
-		*/
-		
 		CardMoveSpaces moveS1 = new CardMoveSpaces();
 		moveS1.setSpaceMove(-3);
 		moveS1.setText(chancekort[16]);
@@ -442,13 +426,7 @@ public class MiniMonopoly {
 		CardMoveSpaces moveS2 = new CardMoveSpaces();
 		moveS2.setSpaceMove(+3);
 		moveS2.setText(chancekort[57]);
-		cards.add(moveS2);
-		
-		
-		
-		
-		
-		
+		cards.add(moveS2);		
 
 		return game;
 	}
