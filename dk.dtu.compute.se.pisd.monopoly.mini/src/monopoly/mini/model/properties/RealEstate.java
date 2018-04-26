@@ -54,5 +54,5 @@ public class RealEstate extends Property{
 	}
 	//TODO Lav en "set" fordeling af huse
 	
-
+	
 }

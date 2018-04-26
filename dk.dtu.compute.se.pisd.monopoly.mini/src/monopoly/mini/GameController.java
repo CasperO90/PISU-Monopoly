@@ -96,23 +96,48 @@ public class GameController {
 			String playerName = gui.getUserString(guiMessages[2]+ j + guiMessages[3]);
 			Player p = new Player();
 			p.setName(playerName);
+<<<<<<< HEAD
 			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[50], guiMessages[51], guiMessages[52], guiMessages[53],guiMessages[54],guiMessages[55]);
 			if (farve == guiMessages[50]) {
+=======
+			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], "Rød", "Grøn", "Blå", "Gul", "Grå","Sort");
+			if (farve == "Rød") {
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 				p.setColor(Color.RED);
 			}
+<<<<<<< HEAD
 			if (farve == guiMessages[51]) {
+=======
+			if (farve == "Grøn") {
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 				p.setColor(Color.GREEN);
 			}
+<<<<<<< HEAD
 			if (farve == guiMessages[52]) {
+=======
+			if (farve == "Blå") {
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 				p.setColor(Color.BLUE);
 			}
+<<<<<<< HEAD
 			if (farve == guiMessages[53]) {
+=======
+			if (farve == "Gul") {
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 				p.setColor(Color.YELLOW);
 			}
+<<<<<<< HEAD
 			if (farve == guiMessages[54]) {
+=======
+			if (farve == "Grå") {
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 				p.setColor(Color.GRAY);
 			}
+<<<<<<< HEAD
 			if (farve == guiMessages[55]) {
+=======
+			if (farve == "Sort") {
+>>>>>>> branch 'master' of https://github.com/CasperO90/PISU-Monopoly.git
 				p.setColor(Color.BLACK);
 
 			}
