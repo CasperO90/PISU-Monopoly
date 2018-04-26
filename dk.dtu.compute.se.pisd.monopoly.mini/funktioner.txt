@@ -3,20 +3,10 @@ Vælg antal spillere
 Spiller 
 , vælg dit navn
  Vælg farve
-, klik til at kaste med terningerne
-Grunden er ejet
-betal (insert amount) til 
-Grunden er ledig
-Vil du købe?, "Ja", "Nej"
-JA
-NEJ
-Du har passeret start, du før (insert amount)
 Gå til startfeltet
 Gå 3 felter tilbage
 Gå til Allegade, hvis du passerer start får du (insert amount)
-Gå til nærmeste grund 
 Gå til Rådhuspladsen 
-Gå til nærmeste rederi
 Gå til Tuborg
 Gå til Carlsberg
 Gå til Øresundsredderiet
@@ -28,18 +18,15 @@ Du får renter fra banken, modtag 20
 Du har vundet en krydsordskonkurrence, modtag 5
 Du får penge tilbage i skat, modtag 15
 Du sælger aktier, modtag 20
-Operaaften, modtag 10 fra hver spiller for billetter
 Det er din fødselsdag, modtag 25
 Din livsforsikring øges, modtag 15
 Du modtager 10 for konsulentarbejde
 Du får andenpladsen i en skønhedskonkurrence, modtag 5
 Du modtager 10 i arv
 Betal 10% af dine penge i skat
-Du bliver valgt som bestyrelsesformand betal 10 til hver spiller
 Lægeregning, betal 10
 Du falder ned af trapper, betal 10 i hospitalsregning
 Du køber skolebøger, betal 15.
-Reperation af hus/hotel, betal 5 pr. hus og 10 pr. hotel
 Frikort, dette kort beholdes og kan anvendes til at komme ud af fængslet
 Gå direkte i fængsel, du får ikke 100 for at passere start
 Du har ikke nok penge

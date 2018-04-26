@@ -283,52 +283,52 @@ public class MiniMonopoly {
 		
 		CardMoveToSpace move = new CardMoveToSpace();
 		move.setTarget(game.getSpaces().get(9));
-		move.setText(chancekort[17]);
+		move.setText(chancekort[7]);
 		cards.add(move);
 		
 		CardMoveToSpace move2 = new CardMoveToSpace();
 		move.setTarget(game.getSpaces().get(39));
-		move.setText(chancekort[19]);
+		move.setText(chancekort[8]);
 		cards.add(move2);
 		
 		CardMoveToSpace move3 = new CardMoveToSpace();
 		move3.setTarget(game.getSpaces().get(12));
-		move3.setText(chancekort[21]);
+		move3.setText(chancekort[9]);
 		cards.add(move3);
 		
 		CardMoveToSpace move4 = new CardMoveToSpace();
 		move4.setTarget(game.getSpaces().get(28));
-		move4.setText(chancekort[22]);
+		move4.setText(chancekort[10]);
 		cards.add(move4);
 		
 		CardMoveToSpace move5 = new CardMoveToSpace();
 		move5.setTarget(game.getSpaces().get(35));
-		move5.setText(chancekort[26]);
+		move5.setText(chancekort[14]);
 		cards.add(move5);
 		
 		CardMoveToSpace move6 = new CardMoveToSpace();
 		move6.setTarget(game.getSpaces().get(5));
-		move6.setText(chancekort[23]);
+		move6.setText(chancekort[11]);
 		cards.add(move6);
 		
 		CardMoveToSpace move7 = new CardMoveToSpace();
 		move7.setTarget(game.getSpaces().get(15));
-		move7.setText(chancekort[24]);
+		move7.setText(chancekort[12]);
 		cards.add(move7);
 		
 		CardMoveToSpace move8 = new CardMoveToSpace();
 		move8.setTarget(game.getSpaces().get(25));
-		move8.setText(chancekort[25]);
+		move8.setText(chancekort[13]);
 		cards.add(move8);
 		
 		CardMoveToSpace move9 = new CardMoveToSpace();
 		move9.setTarget(game.getSpaces().get(0));
-		move9.setText(chancekort[15]);
+		move9.setText(chancekort[5]);
 		cards.add(move9);
 		
 		CardMoveToSpace move10 = new CardMoveToSpace();
 		move10.setTarget(game.getSpaces().get(10));
-		move10.setText(chancekort[45]);
+		move10.setText(chancekort[31]);
 		cards.add(move10);
 		
 		PayTax tax = new PayTax();
@@ -336,97 +336,97 @@ public class MiniMonopoly {
 		cards.add(tax);
 		
 		CardReceiveMoneyFromBank b1 = new CardReceiveMoneyFromBank();
-		b1.setText(chancekort[27]);
+		b1.setText(chancekort[15]);
 		b1.setAmount(50);
 		cards.add(b1);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b2 = new CardReceiveMoneyFromBank();
-		b2.setText(chancekort[29]);
+		b2.setText(chancekort[17]);
 		b2.setAmount(5);
 		cards.add(b2);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b3 = new CardReceiveMoneyFromBank();
-		b3.setText(chancekort[28]);
+		b3.setText(chancekort[16]);
 		b3.setAmount(20);
 		cards.add(b3);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b4 = new CardReceiveMoneyFromBank();
-		b4.setText(chancekort[30]);
+		b4.setText(chancekort[18]);
 		b4.setAmount(15);
 		cards.add(b4);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b5 = new CardReceiveMoneyFromBank();
-		b5.setText(chancekort[31]);
+		b5.setText(chancekort[19]);
 		b5.setAmount(20);
 		cards.add(b5);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b6 = new CardReceiveMoneyFromBank();
-		b6.setText(chancekort[33]);
+		b6.setText(chancekort[20]);
 		b6.setAmount(25);
 		cards.add(b6);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b7 = new CardReceiveMoneyFromBank();
-		b7.setText(chancekort[34]);
+		b7.setText(chancekort[21]);
 		b7.setAmount(15);
 		cards.add(b7);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b8 = new CardReceiveMoneyFromBank();
-		b8.setText(chancekort[35]);
+		b8.setText(chancekort[22]);
 		b8.setAmount(10);
 		cards.add(b8);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b9 = new CardReceiveMoneyFromBank();
-		b9.setText(chancekort[36]);
+		b9.setText(chancekort[23]);
 		b9.setAmount(5);
 		cards.add(b9);
 		game.setCardDeck(cards);
 		
 		CardReceiveMoneyFromBank b10 = new CardReceiveMoneyFromBank();
-		b10.setText(chancekort[37]);
+		b10.setText(chancekort[24]);
 		b10.setAmount(10);
 		cards.add(b10);
 		game.setCardDeck(cards);
 		
 		CardPayMoneyToBank p1 = new CardPayMoneyToBank();
-		p1.setText(chancekort[40]);
+		p1.setText(chancekort[27]);
 		p1.setAmount(10);
 		cards.add(p1);
 		game.setCardDeck(cards);
 		
 		CardPayMoneyToBank p2 = new CardPayMoneyToBank();
-		p2.setText(chancekort[41]);
+		p2.setText(chancekort[26]);
 		p2.setAmount(10);
 		cards.add(p2);
 		game.setCardDeck(cards);
 		
 		CardPayMoneyToBank p3 = new CardPayMoneyToBank();
-		p3.setText(chancekort[42]);
+		p3.setText(chancekort[28]);
 		p3.setAmount(15);
 		cards.add(p3);
 		game.setCardDeck(cards);
 		
 		CardPayMoneyToBank p4 = new CardPayMoneyToBank();
-		p4.setText(chancekort[47]);
+		p4.setText(chancekort[32]);
 		p4.setAmount(20);
 		cards.add(p4);
 		game.setCardDeck(cards);
 		
 		CardMoveSpaces moveS1 = new CardMoveSpaces();
 		moveS1.setSpaceMove(-3);
-		moveS1.setText(chancekort[16]);
+		moveS1.setText(chancekort[6]);
 		cards.add(moveS1);
 		
 		CardMoveSpaces moveS2 = new CardMoveSpaces();
 		moveS2.setSpaceMove(+3);
-		moveS2.setText(chancekort[57]);
+		moveS2.setText(chancekort[42]);
 		cards.add(moveS2);		
 
 		return game;
