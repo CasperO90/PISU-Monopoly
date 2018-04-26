@@ -96,7 +96,7 @@ public class GameController {
 			String playerName = gui.getUserString(guiMessages[2]+ j + guiMessages[3]);
 			Player p = new Player();
 			p.setName(playerName);
-			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[48], guiMessages[49], guiMessages[50], guiMessages[51],guiMessages[52],guiMessages[53]);
+			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[51], guiMessages[52], guiMessages[53], guiMessages[54],guiMessages[55],guiMessages[56]);
 			if (farve == guiMessages[51]) {
 				p.setColor(Color.RED);
 			}
