@@ -214,6 +214,7 @@ public class MiniMonopoly {
 		goToPrison.setName(guiMessages[30]);
 		game.addSpace(goToPrison);
 		
+		
 		p = new Property();
 		p.setName(guiMessages[31]);
 		p.setCost(300);

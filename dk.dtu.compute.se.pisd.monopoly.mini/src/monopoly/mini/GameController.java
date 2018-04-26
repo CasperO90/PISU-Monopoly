@@ -96,23 +96,23 @@ public class GameController {
 			String playerName = gui.getUserString(guiMessages[2]+ j + guiMessages[3]);
 			Player p = new Player();
 			p.setName(playerName);
-			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[51], guiMessages[52], guiMessages[53], guiMessages[54],guiMessages[55],guiMessages[56]);
-			if (farve == guiMessages[51]) {
+			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[50], guiMessages[51], guiMessages[52], guiMessages[53],guiMessages[54],guiMessages[55]);
+			if (farve == guiMessages[50]) {
 				p.setColor(Color.RED);
 			}
-			if (farve == guiMessages[52]) {
+			if (farve == guiMessages[51]) {
 				p.setColor(Color.GREEN);
 			}
-			if (farve == guiMessages[53]) {
+			if (farve == guiMessages[52]) {
 				p.setColor(Color.BLUE);
 			}
-			if (farve == guiMessages[54]) {
+			if (farve == guiMessages[53]) {
 				p.setColor(Color.YELLOW);
 			}
-			if (farve == guiMessages[55]) {
+			if (farve == guiMessages[54]) {
 				p.setColor(Color.GRAY);
 			}
-			if (farve == guiMessages[56]) {
+			if (farve == guiMessages[55]) {
 				p.setColor(Color.BLACK);
 
 			}
@@ -326,7 +326,8 @@ public class GameController {
 	 * @param player the player going to jail
 	 */
 	public void gotoJail(Player player) {
-		// TODO the 10 should not be hard coded
+		
+	// TODO the 10 should not be hard coded
 		player.setCurrentPosition(game.getSpaces().get(10));
 		player.setInPrison(true);
 	}
