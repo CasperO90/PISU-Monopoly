@@ -210,9 +210,9 @@ public class MiniMonopoly {
 		p.setRent(28);
 		game.addSpace(p);
 		
-		Space goToPrison = new Space();
-		goToPrison.setName(guiMessages[30]);
-		game.addSpace(goToPrison);
+		Space goToJail = new Space();
+		goToJail.setName(guiMessages[30]);
+		game.addSpace(goToJail);
 		
 		
 		p = new Property();

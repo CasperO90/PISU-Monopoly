@@ -236,6 +236,7 @@ public class GameController {
 				player.setInPrison(false);
 				gui.showMessage("Player " + player.getName() + " leaves prison now since he cast a double!");
 			} else if (player.isInPrison()) {
+				gui.showMessage("Du slog "+ die1+ " og "+ die2 +" hvilket ikke er double men du har mulighed for at komme ud af fængsel");
 				String choice = gui.getUserSelection(
 						"Player " + player.getName() +
 						": Do you want to buy you out of prison " +
@@ -256,9 +257,13 @@ public class GameController {
 				doublesCount++;
 				if (doublesCount > 2) {
 					gui.showMessage("Player " + player.getName() + " has cast the third double and goes to jail!");
+					player.setInPrison(true);
 					gotoJail(player);
 					return;
-				}
+				
+				
+			}
+				
 			}
 			if (!player.isInPrison()) {
 				// make the actual move by computing the new position and then
