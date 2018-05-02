@@ -90,11 +90,8 @@ public class Utility extends Property {
 	}
 	//TODO Lav en "set" fordeling af huse
 	
-	
-	testtestest
 	 */
-		//testtest
-	//testotesto
+	
 		
 }
 
