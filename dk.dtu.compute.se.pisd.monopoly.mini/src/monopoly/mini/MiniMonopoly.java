@@ -277,8 +277,7 @@ public class MiniMonopoly {
 		
 		
 		
-		//Chancekort - @Elisa, Casper d. 24/04
-		// MoveToSpace er implementeret
+		//Chancekort - @Elisa, Casper
 		
 		String [] chancekort = ReadText.file("funktioner.txt");
 		
