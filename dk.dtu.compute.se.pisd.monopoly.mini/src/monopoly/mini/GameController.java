@@ -83,7 +83,7 @@ public class GameController {
 	 * is hard-coded. But this should be done by interacting with 
 	 * the user.
 	 */
-	//@Henrik
+	//@Henrik, @Elisa, @Casper
 	public void createPlayers() {
 
 
