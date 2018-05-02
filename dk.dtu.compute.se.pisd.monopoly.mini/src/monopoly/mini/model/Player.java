@@ -24,6 +24,8 @@ public class Player extends Subject {
 	
 	private String name;
 	
+	private int id;
+
 	private Color color;
 	
 	private Space currentPosition;
@@ -38,7 +40,14 @@ public class Player extends Subject {
 	
 	private List<Card> ownedCards = new ArrayList<Card>();
 
-	
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	/**
 	 * Returns the name of the player.
