@@ -5,7 +5,7 @@ Spiller
  Vælg farve
 Gå til startfeltet
 Gå 3 felter tilbage
-Gå til Allegade, hvis du passerer start får du (insert amount)
+Gå til Allegade
 Gå til Rådhuspladsen 
 Gå til Tuborg
 Gå til Carlsberg

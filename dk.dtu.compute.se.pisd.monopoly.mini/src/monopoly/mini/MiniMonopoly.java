@@ -287,8 +287,8 @@ public class MiniMonopoly {
 		cards.add(move);
 		
 		CardMoveToSpace move2 = new CardMoveToSpace();
-		move.setTarget(game.getSpaces().get(39));
-		move.setText(chancekort[8]);
+		move2.setTarget(game.getSpaces().get(39));
+		move2.setText(chancekort[8]);
 		cards.add(move2);
 		
 		CardMoveToSpace move3 = new CardMoveToSpace();
@@ -325,14 +325,15 @@ public class MiniMonopoly {
 		move9.setTarget(game.getSpaces().get(0));
 		move9.setText(chancekort[5]);
 		cards.add(move9);
-		
+		/* gå i fængsel. virker med positionen men spilleren sidder ikke i fængsel, er kun på besøg
 		CardMoveToSpace move10 = new CardMoveToSpace();
 		move10.setTarget(game.getSpaces().get(10));
-		move10.setText(chancekort[31]);
+		move10.setText(chancekort[30]);
 		cards.add(move10);
+		*/
 		
 		PayTax tax = new PayTax();
-		tax.setText("Pay 10% income tax!");
+		tax.setText("Betal 10% i skat!");
 		cards.add(tax);
 		
 		CardReceiveMoneyFromBank b1 = new CardReceiveMoneyFromBank();
