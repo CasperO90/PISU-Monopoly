@@ -6,6 +6,7 @@ import java.util.List;
 import monopoly.mini.model.Card;
 import monopoly.mini.model.Chance;
 import monopoly.mini.model.Game;
+import monopoly.mini.model.GoToJail;
 import monopoly.mini.model.Property;
 import monopoly.mini.model.ReadText;
 import monopoly.mini.model.Space;
@@ -210,7 +211,7 @@ public class MiniMonopoly {
 		p.setRent(28);
 		game.addSpace(p);
 		
-		Space goToJail = new Space();
+		Space goToJail = new GoToJail();
 		goToJail.setName(guiMessages[30]);
 		game.addSpace(goToJail);
 		
