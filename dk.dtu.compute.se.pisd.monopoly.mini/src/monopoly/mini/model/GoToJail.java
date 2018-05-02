@@ -9,7 +9,9 @@ public class GoToJail extends Space {
 	
 	
 	public void doAction(GameController controller, Player player) throws PlayerBrokeException {
-		controller.gotoJail(player);
+		if(player.getCurrentPosition().equals(this)) {
+			controller.gotoJail(player);
+		}
 	}
 
 }

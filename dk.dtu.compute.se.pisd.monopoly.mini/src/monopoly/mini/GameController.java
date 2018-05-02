@@ -82,7 +82,7 @@ public class GameController {
 	 * is hard-coded. But this should be done by interacting with 
 	 * the user.
 	 */
-	
+	//@Henrik
 	public void createPlayers() {
 
 
@@ -97,23 +97,23 @@ public class GameController {
 			String playerName = gui.getUserString(guiMessages[2]+ j + guiMessages[3]);
 			Player p = new Player();
 			p.setName(playerName);
-			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], "Rød", "Grøn", "Blå", "Gul", "Grå","Sort");
-			if (farve == "Rød") {
+			String farve = gui.getUserButtonPressed(guiMessages[2] + j + guiMessages[4], guiMessages[36], guiMessages[37], guiMessages[38], guiMessages[39],guiMessages[40],guiMessages[41]);
+			if (farve == guiMessages[36]) {
 				p.setColor(Color.RED);
 			}
-			if (farve == "Grøn") {
+			if (farve == guiMessages[37]) {
 				p.setColor(Color.GREEN);
 			}
-			if (farve == "Blå") {
+			if (farve == guiMessages[38]) {
 				p.setColor(Color.BLUE);
 			}
-			if (farve == "Gul") {
+			if (farve == guiMessages[39]) {
 				p.setColor(Color.YELLOW);
 			}
-			if (farve == "Grå") {
+			if (farve == guiMessages[40]) {
 				p.setColor(Color.GRAY);
 			}
-			if (farve == "Sort") {
+			if (farve == guiMessages[41]) {
 				p.setColor(Color.BLACK);
 
 			}
@@ -222,6 +222,7 @@ public class GameController {
 	 * @param player the player making the move
 	 * @throws PlayerBrokeException if the player goes broke during the move
 	 */
+	//@Henrik & @Marthias
 	public void makeMove(Player player) throws PlayerBrokeException {
 
 		boolean castDouble;
@@ -236,7 +237,7 @@ public class GameController {
 				player.setInPrison(false);
 				gui.showMessage("Player " + player.getName() + " leaves prison now since he cast a double!");
 			} else if (player.isInPrison()) {
-				gui.showMessage("Du slog "+ die1+ " og "+ die2 +" hvilket ikke er double men du har mulighed for at komme ud af fængsel");
+				gui.showMessage("Du slog "+ die1+ " og "+ die2 +" hvilket ikke er double men du har mulighed for at købe dig ud af fÃ¦ngsel");
 				String choice = gui.getUserSelection(
 						"Player " + player.getName() +
 						": Do you want to buy you out of prison " +
@@ -312,7 +313,6 @@ public class GameController {
 	 * @param player the player going to jail
 	 */
 	public void gotoJail(Player player) {
-		
 	// TODO the 10 should not be hard coded
 		player.setCurrentPosition(game.getSpaces().get(10));
 		player.setInPrison(true);
@@ -376,7 +376,7 @@ public class GameController {
 			player.setBroke(true);
 		}
 
-		 */
+		 /*
 
 
 		/*		String choice = gui.getUserSelection(
