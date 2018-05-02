@@ -12,7 +12,7 @@ import monopoly.mini.model.Property;
  */
 public class RealEstate extends Property{
 	
-	// TODO to be implemented @Casper og Andy start d. 17/4
+	// TODO to be implemented @Casper og Andreas
 	
 	private int nrOfHouses;
 	
