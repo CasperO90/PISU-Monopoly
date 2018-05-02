@@ -7,6 +7,7 @@ import monopoly.mini.model.Card;
 import monopoly.mini.model.Chance;
 import monopoly.mini.model.Game;
 import monopoly.mini.model.GoToJail;
+import monopoly.mini.model.Player;
 import monopoly.mini.model.Property;
 import monopoly.mini.model.ReadText;
 import monopoly.mini.model.Space;
@@ -17,6 +18,8 @@ import monopoly.mini.model.cards.CardReceiveMoneyFromBank;
 import monopoly.mini.model.cards.CardPayMoneyToBank;
 import monopoly.mini.model.cards.PayTax;
 import monopoly.mini.model.properties.Utility;
+import monopoly.mini.model.cards.CardGoToJail;
+import monopoly.mini.GameController;
 
 /**
  * Main class for setting up and running a (Mini-)Monoploy game.
@@ -280,7 +283,7 @@ public class MiniMonopoly {
 		String [] chancekort = ReadText.file("funktioner.txt");
 		
 		List<Card> cards = new ArrayList<Card>();
-		
+		//Kort der flytter dig til et bestemt felt
 		
 		CardMoveToSpace move = new CardMoveToSpace();
 		move.setTarget(game.getSpaces().get(9));
@@ -326,17 +329,20 @@ public class MiniMonopoly {
 		move9.setTarget(game.getSpaces().get(0));
 		move9.setText(chancekort[5]);
 		cards.add(move9);
-		/* gå i fængsel. virker med positionen men spilleren sidder ikke i fængsel, er kun på besøg
+		
+		//Fængselskort
 		CardMoveToSpace move10 = new CardMoveToSpace();
-		move10.setTarget(game.getSpaces().get(10));
+		move10.setTarget(game.getSpaces().get(30));
 		move10.setText(chancekort[30]);
 		cards.add(move10);
-		*/
+		
+		//Kort- betal skat
 		
 		PayTax tax = new PayTax();
 		tax.setText("Betal 10% i skat!");
 		cards.add(tax);
 		
+		//Kort hvor du får penge fra banken
 		CardReceiveMoneyFromBank b1 = new CardReceiveMoneyFromBank();
 		b1.setText(chancekort[15]);
 		b1.setAmount(50);
@@ -396,6 +402,8 @@ public class MiniMonopoly {
 		b10.setAmount(10);
 		cards.add(b10);
 		game.setCardDeck(cards);
+		
+		//Kort hvor du skal betale til banken
 		
 		CardPayMoneyToBank p1 = new CardPayMoneyToBank();
 		p1.setText(chancekort[27]);
