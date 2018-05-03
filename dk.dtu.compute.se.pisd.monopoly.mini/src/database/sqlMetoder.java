@@ -37,10 +37,12 @@ public class sqlMetoder {
 		cp.close();
 	}
 	public void updatePlayer(Player player, Game game) throws SQLException  {
-		CallableStatement cp = conn.prepareCall("{call UpdatePlayers(?,?)}");
+		CallableStatement cp = conn.prepareCall("{call UpdatePlayers(?,?,?)}");
 			
 		cp.setInt("P", player.getCurrentPosition().getIndex());
 		cp.setInt("Beholdning", player.getBalance());
+		cp.setInt("ID", player.getId());
+		cp.executeQuery();
 		
 	/*	ResultSet rs = cp.executeQuery();
 			while(rs.next()) {
@@ -53,6 +55,15 @@ public class sqlMetoder {
 //		}
 	//	rs.close();
 		cp.close();
+	}
+	public void deleteAllPlayerData () {
+		try {
+			CallableStatement cp = conn.prepareCall("{call deleteAllPlayerData()}");
+			cp.execute();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
 		

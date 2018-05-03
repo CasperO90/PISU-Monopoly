@@ -60,7 +60,8 @@ public class GameController {
 	private int amountOfPlayers; 
 
 	String[] guiMessages = ReadText.file("funktioner.txt");
-
+	
+	sqlMetoder sql = new sqlMetoder();
 
 
 
@@ -73,7 +74,7 @@ public class GameController {
 	public GameController(Game game) {
 		super();
 		this.game = game;
-
+		sql.deleteAllPlayerData();
 		gui = new GUI();
 	}
 
@@ -122,7 +123,7 @@ public class GameController {
 			game.addPlayer(p);	
 			
 			
-			sqlMetoder sql = new sqlMetoder();
+			
 			try {
 				sql.createPlayer(p);
 			} catch (SQLException e) {
@@ -218,6 +219,13 @@ public class GameController {
 				
 				
 			}
+			try {
+				sql.updatePlayer(player, game);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
 
 		dispose();
