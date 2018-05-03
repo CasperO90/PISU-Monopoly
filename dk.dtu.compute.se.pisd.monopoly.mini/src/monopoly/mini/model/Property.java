@@ -1,7 +1,12 @@
 package monopoly.mini.model;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import monopoly.mini.GameController;
 import monopoly.mini.model.exceptions.PlayerBrokeException;
+import monopoly.mini.MiniMonopoly;
 
 /**
  * A property which is a space that can be owned by a player.
@@ -14,10 +19,28 @@ public class Property extends Space {
 	private int cost;
 	private int rent;
 	private int mortgage;
+	private int colorcode;
+	
 	
 	private Player owner;
 	
-
+/*	List <Property> properties  = new ArrayList<Property>();
+	
+	public void createMap() {
+		HashMap <Integer, List<Property>> colorToPropertyMap = new HashMap <Integer, List<Property>>();
+		for (Property property : properties ) {
+			int color = property.getColorcode();
+			List<Property> list = colorToPropertyMap.get(color);
+			if (list== null) {
+				list = new ArrayList <Property>();
+				
+				colorToPropertyMap.put(color,list);
+			}
+			list.add(property);
+		}
+	}
+	
+	
 	/**
 	 * Returns the cost of this property.
 	 * 
@@ -37,6 +60,14 @@ public class Property extends Space {
 		this.mortgage = mortgage;
 		notifyChange();
 	}
+	public int getColorcode() {
+		return colorcode;
+	}
+	public void setColorcode(int colorcode) {
+		this.colorcode = colorcode;
+		notifyChange();
+	}
+	
 	/**
 	 * Sets the cost of this property.
 	 * 
@@ -101,5 +132,8 @@ public class Property extends Space {
 			controller.payment(player, rent, owner);
 		}
 	}
+
+
+	
 
 }

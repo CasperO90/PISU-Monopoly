@@ -1,6 +1,7 @@
 package monopoly.mini;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import monopoly.mini.model.Card;
@@ -29,6 +30,7 @@ import monopoly.mini.GameController;
  */
 public class MiniMonopoly {
 	
+	
 	/**
 	 * Creates the initial static situation of a Monopoly game. Note
 	 * that the players are not created here, and the chance cards
@@ -38,35 +40,40 @@ public class MiniMonopoly {
 	 */
 	
 	public static Game createGame() {
-
-		// Create the initial Game set up (note that, in this simple
-		// setup, we use only 11 spaces). Note also that this setup
-		// could actually be loaded from a file or database instead
-		// of creating it programmatically.
+		
+		
 		Game game = new Game();
 	//Implementering af felterne @Elisa
 		String [] guiMessages = ReadText.file("fields.txt");
+		
+		    
+		List <Utility> utilities = new ArrayList<Utility>();
+		List <Property> properties  = new ArrayList<Property>();
 		
 		
 		Space go = new Space();
 		go.setName(guiMessages[0]);
 		game.addSpace(go);
 		
-		Property p = new Property();
-		p.setName(guiMessages[1]);
-		p.setCost(60);
-		p.setRent(5);
-		game.addSpace(p);
+		Property p1 = new Property();
+		p1.setName(guiMessages[1]);
+		p1.setCost(60);
+		p1.setRent(5);
+		p1.setColorcode(1);
+		game.addSpace(p1);
+		properties.add(p1);
 		
 		Chance chance = new Chance();
 		chance.setName(guiMessages[2]);
 		game.addSpace(chance);
 		
-		p = new Property();
-		p.setName(guiMessages[3]);
-		p.setCost(60);
-		p.setRent(5);
-		game.addSpace(p);
+		Property p2 = new Property();
+		p2.setName(guiMessages[3]);
+		p2.setCost(60);
+		p2.setRent(5);
+		p2.setColorcode(1);
+		game.addSpace(p2);
+		properties.add(p2);
 		
 		Tax t = new Tax();
 		t.setName(guiMessages[4]);
@@ -76,212 +83,255 @@ public class MiniMonopoly {
 		s.setName(guiMessages[5]);
 		s.setCost(200);
 		s.setRent(20);
+		s.setColorcode(11);
 		game.addSpace(s);
+		utilities.add(s);
 
-		p = new Property();
-		p.setName(guiMessages[6]);
-		p.setCost(100);
-		p.setRent(10);
-		game.addSpace(p);
+		Property p3 = new Property();
+		p3.setName(guiMessages[6]);
+		p3.setCost(100);
+		p3.setRent(10);
+		p3.setColorcode(2);
+		game.addSpace(p3);
+		properties.add(p3);
 		
 		chance = new Chance();
 		chance.setName(guiMessages[7]);
 		game.addSpace(chance);
 		
-		p = new Property();
-		p.setName(guiMessages[8]);
-		p.setCost(100);
-		p.setRent(10);
-		game.addSpace(p);
+		Property p4 = new Property();
+		p4.setName(guiMessages[8]);
+		p4.setCost(100);
+		p4.setRent(10);
+		p4.setColorcode(2);
+		game.addSpace(p4);
+		properties.add(p4);
 		
-		p = new Property();
-		p.setName(guiMessages[9]);
-		p.setCost(120);
-		p.setRent(12);
-		game.addSpace(p);
+		Property p5 = new Property();
+		p5.setName(guiMessages[9]);
+		p5.setCost(120);
+		p5.setRent(12);
+		p5.setColorcode(2);
+		game.addSpace(p5);
+		properties.add(p5);
 		
 		Space prison = new Space();
 		prison.setName(guiMessages[10]);
 		game.addSpace(prison);
 		
-		p = new Property();
-		p.setName(guiMessages[11]);
-		p.setCost(140);
-		p.setRent(14);
-		game.addSpace(p);
-		
-		p = new Property();
-		p.setName(guiMessages[13]);
-		p.setCost(140);
-		p.setRent(14);
-		game.addSpace(p);
+		Property p6 = new Property();
+		p6.setName(guiMessages[11]);
+		p6.setCost(140);
+		p6.setRent(14);
+		p6.setColorcode(3);
+		game.addSpace(p6);
+		properties.add(p6);
 		
 		Utility k = new Utility();
 		k.setName(guiMessages[12]);
 		k.setCost(150);
 		k.setRent(15);
+		k.setColorcode(12);
 		game.addSpace(k);
+		utilities.add(k);
 		
-		p = new Property();
-		p.setName(guiMessages[14]);
-		p.setCost(160);
-		p.setRent(16);
-		game.addSpace(p);
+		Property p7 = new Property();
+		p7.setName(guiMessages[13]);
+		p7.setCost(140);
+		p7.setRent(14);
+		p7.setColorcode(3);
+		game.addSpace(p7);
+		properties.add(p7);
+		
+		Property p8 = new Property();
+		p8.setName(guiMessages[14]);
+		p8.setCost(160);
+		p8.setRent(16);
+		p8.setColorcode(3);
+		game.addSpace(p8);
+		properties.add(p8);
 		
 		Utility l = new Utility();
 		l.setName(guiMessages[15]);
 		l.setCost(200);
 		l.setRent(20);
+		l.setColorcode(11);
 		game.addSpace(l);
+		utilities.add(l);
 		
-		p = new Property();
-		p.setName(guiMessages[16]);
-		p.setCost(180);
-		p.setRent(18);
-		game.addSpace(p);
+		Property p9 = new Property();
+		p9.setName(guiMessages[16]);
+		p9.setCost(180);
+		p9.setRent(18);
+		p9.setColorcode(4);
+		game.addSpace(p9);
+		properties.add(p9);
 		
 		chance = new Chance();
 		chance.setName(guiMessages[17]);
 		game.addSpace(chance);
 		
-		p = new Property();
-		p.setName(guiMessages[18]);
-		p.setCost(180);
-		p.setRent(18);
-		game.addSpace(p);
+		Property p10 = new Property();
+		p10.setName(guiMessages[18]);
+		p10.setCost(180);
+		p10.setRent(18);
+		p10.setColorcode(4);
+		game.addSpace(p10);
+		properties.add(p10);
 		
 		
-		p = new Property();
-		p.setName(guiMessages[19]);
-		p.setCost(200);
-		p.setRent(20);
-		game.addSpace(p);
+		Property p11 = new Property();
+		p11.setName(guiMessages[19]);
+		p11.setCost(200);
+		p11.setRent(20);
+		p11.setColorcode(4);
+		game.addSpace(p11);
+		properties.add(p11);
 		
 		Space parking = new Space();
 		parking.setName(guiMessages[20]);
 		game.addSpace(parking);
 		
-		p = new Property();
-		p.setName(guiMessages[21]);
-		game.addSpace(p);
-		p.setCost(220);
-		p.setRent(22);
+		Property p12 = new Property();
+		p12.setName(guiMessages[21]);
+		game.addSpace(p12);
+		p12.setCost(220);
+		p12.setRent(22);
+		p12.setColorcode(5);
+		properties.add(p12);
 		
 		
 		chance = new Chance();
 		chance.setName(guiMessages[22]);
 		game.addSpace(chance);
 		
-		p = new Property();
-		p.setName(guiMessages[23]);
-		p.setCost(220);
-		p.setRent(22);
-		game.addSpace(p);
+		Property p13 = new Property();
+		p13.setName(guiMessages[23]);
+		p13.setCost(220);
+		p13.setRent(22);
+		p13.setColorcode(5);
+		game.addSpace(p13);
+		properties.add(p13);
 		
-		p = new Property();
-		p.setName(guiMessages[24]);
-		p.setCost(240);
-		p.setRent(24);
-		game.addSpace(p);
+		Property p14 = new Property();
+		p14.setName(guiMessages[24]);
+		p14.setCost(240);
+		p14.setRent(24);
+		p14.setColorcode(5);
+		game.addSpace(p14);
+		properties.add(p14);
 		
 		Utility m = new Utility();
 		m.setName(guiMessages[25]);
 		m.setCost(200);
 		m.setRent(20);
+		m.setColorcode(11);
 		game.addSpace(m);
+		utilities.add(m);
 		
-		p = new Property();
-		p.setName(guiMessages[26]);
-		p.setCost(260);
-		p.setRent(26);
-		game.addSpace(p);
+		Property p15 = new Property();
+		p15.setName(guiMessages[26]);
+		p15.setCost(260);
+		p15.setRent(26);
+		p15.setColorcode(6);
+		game.addSpace(p15);
+		properties.add(p15);
 		
-		p = new Property();
-		p.setName(guiMessages[27]);
-		p.setCost(260);
-		p.setRent(26);
-		game.addSpace(p);
+		Property p16 = new Property();
+		p16.setName(guiMessages[27]);
+		p16.setCost(260);
+		p16.setRent(26);
+		p16.setColorcode(6);
+		game.addSpace(p16);
+		properties.add(p16);
 		
 		Utility n = new Utility();
 		n.setName(guiMessages[28]);
 		n.setCost(150);
 		n.setRent(15);
+		n.setColorcode(12);
 		game.addSpace(n);
+		utilities.add(n);
 		
-		p = new Property();
-		p.setName(guiMessages[29]);
-		p.setCost(280);
-		p.setRent(28);
-		game.addSpace(p);
+		Property p17 = new Property();
+		p17.setName(guiMessages[29]);
+		p17.setCost(280);
+		p17.setRent(28);
+		p17.setColorcode(6);
+		game.addSpace(p17);
+		properties.add(p17);
 		
 		Space goToJail = new GoToJail();
 		goToJail.setName(guiMessages[30]);
 		game.addSpace(goToJail);
 		
 		
-		p = new Property();
-		p.setName(guiMessages[31]);
-		p.setCost(300);
-		p.setRent(30);
-		game.addSpace(p);
+		Property p18 = new Property();
+		p18.setName(guiMessages[31]);
+		p18.setCost(300);
+		p18.setRent(30);
+		p18.setColorcode(7);
+		game.addSpace(p18);
+		properties.add(p18);
 		
-		p = new Property();
-		p.setName(guiMessages[32]);
-		p.setCost(300);
-		p.setRent(30);
-		game.addSpace(p);
+		Property p19 = new Property();
+		p19.setName(guiMessages[32]);
+		p19.setCost(300);
+		p19.setRent(30);
+		p19.setColorcode(7);
+		game.addSpace(p19);
+		properties.add(p19);
 		
 		chance = new Chance();
 		chance.setName(guiMessages[33]);
 		game.addSpace(chance);
 		
-		p = new Property();
-		p.setName(guiMessages[34]);
-		p.setCost(320);
-		p.setRent(32);
-		game.addSpace(p);
+		Property p20 = new Property();
+		p20.setName(guiMessages[34]);
+		p20.setCost(320);
+		p20.setRent(32);
+		p20.setColorcode(7);
+		game.addSpace(p20);
+		properties.add(p20);
 		
 		Utility h = new Utility();
 		h.setName(guiMessages[35]);
 		h.setCost(200);
 		h.setRent(20);
+		h.setColorcode(11);
 		game.addSpace(h);
-		
-
+		utilities.add(h);
+	
 		chance = new Chance();
 		chance.setName(guiMessages[36]);
 		game.addSpace(chance);
 		
-		p = new Property();
-		p.setName(guiMessages[37]);
-		p.setCost(360);
-		p.setRent(36);
-		game.addSpace(p);
+		Property p21 = new Property();
+		p21.setName(guiMessages[37]);
+		p21.setCost(360);
+		p21.setRent(36);
+		p21.setColorcode(8);
+		game.addSpace(p21);
+		properties.add(p21);
 		
 		Tax t2 = new Tax();
 		t2.setName(guiMessages[38]);
 		game.addSpace(t2);
 		
-		p = new Property();
-		p.setName(guiMessages[39]);
-		p.setCost(400);
-		p.setRent(40);
-		game.addSpace(p);
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		Property p22 = new Property();
+		p22.setName(guiMessages[39]);
+		p22.setCost(400);
+		p22.setRent(40);
+		p22.setColorcode(8);
+		game.addSpace(p22);
+		properties.add(p22);
 		
 		//Chancekort - @Elisa, Casper
 		
 		String [] chancekort = ReadText.file("funktioner.txt");
 		
 		List<Card> cards = new ArrayList<Card>();
+		
 		//Kort der flytter dig til et bestemt felt
 		
 		CardMoveToSpace move = new CardMoveToSpace();
@@ -404,28 +454,28 @@ public class MiniMonopoly {
 		
 		//Kort hvor du skal betale til banken
 		
-		CardPayMoneyToBank p1 = new CardPayMoneyToBank();
-		p1.setText(chancekort[27]);
-		p1.setAmount(10);
-		cards.add(p1);
+		CardPayMoneyToBank pay1 = new CardPayMoneyToBank();
+		pay1.setText(chancekort[27]);
+		pay1.setAmount(10);
+		cards.add(pay1);
 		game.setCardDeck(cards);
 		
-		CardPayMoneyToBank p2 = new CardPayMoneyToBank();
-		p2.setText(chancekort[26]);
-		p2.setAmount(10);
-		cards.add(p2);
+		CardPayMoneyToBank pay2 = new CardPayMoneyToBank();
+		pay2.setText(chancekort[26]);
+		pay2.setAmount(10);
+		cards.add(pay2);
 		game.setCardDeck(cards);
 		
-		CardPayMoneyToBank p3 = new CardPayMoneyToBank();
-		p3.setText(chancekort[28]);
-		p3.setAmount(15);
-		cards.add(p3);
+		CardPayMoneyToBank pay3 = new CardPayMoneyToBank();
+		pay3.setText(chancekort[28]);
+		pay3.setAmount(15);
+		cards.add(pay3);
 		game.setCardDeck(cards);
 		
-		CardPayMoneyToBank p4 = new CardPayMoneyToBank();
-		p4.setText(chancekort[32]);
-		p4.setAmount(20);
-		cards.add(p4);
+		CardPayMoneyToBank pay4 = new CardPayMoneyToBank();
+		pay4.setText(chancekort[32]);
+		pay4.setAmount(20);
+		cards.add(pay4);
 		game.setCardDeck(cards);
 		
 		CardMoveSpaces moveS1 = new CardMoveSpaces();

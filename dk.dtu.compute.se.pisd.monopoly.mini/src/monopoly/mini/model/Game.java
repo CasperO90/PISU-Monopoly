@@ -3,6 +3,7 @@ package monopoly.mini.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import monopoly.mini.model.Property;
 
 import designpatterns.Subject;
 
@@ -143,6 +144,10 @@ public class Game extends Subject {
 		notifyChange();
 	}
 	
+	
+	
+	
+	
 	/**
 	 * Returns the current player of the game. This is the player
 	 * who's turn it is to do the next move (or currently is doing a move).
@@ -171,5 +176,6 @@ public class Game extends Subject {
 		}
 		notifyChange();
 	}
+
 
 }

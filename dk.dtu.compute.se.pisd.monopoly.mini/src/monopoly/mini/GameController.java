@@ -82,7 +82,7 @@ public class GameController {
 	 * is hard-coded. But this should be done by interacting with 
 	 * the user.
 	 */
-	//@Henrik, @Elisa, @Casper
+	//@Henrik
 	public void createPlayers() {
 
 
@@ -457,6 +457,31 @@ public void offerToBuy(Property property, Player player) throws PlayerBrokeExcep
 	// is started
 	auction(property);
 }
+// se om man ejer alle fra en farvegruppe
+public boolean checkColor(Player player, int colorcode) {
+	
+	List <Property> properties  = new ArrayList<Property>(); 
+	boolean ownsAllProperties = false; 
+	int numberOfOwnedProperties = 0; 
+	for( Property property : properties) {
+			if (property.getOwner() == player) {
+				numberOfOwnedProperties++;
+			}
+		}
+
+		if (numberOfOwnedProperties == properties.size()) {
+			ownsAllProperties = true;
+			System.out.println("Du ejer alle grunde i farvegruppen, du kan nu købe huse!");
+		}
+
+		return ownsAllProperties;
+	
+	}
+	
+	
+	
+	
+	
 
 /**
  * This method implements a payment activity to another player,
@@ -593,5 +618,6 @@ public void dispose() {
 		//      deployed via Maven (or other  official versions)
 	}
 }
+
 
 }
