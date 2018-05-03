@@ -12,7 +12,7 @@ import monopoly.mini.model.Property;
  */
 public class RealEstate extends Property{
 	
-	// TODO to be implemented @Casper og Andreas
+	// @author Casper og @author Andreas
 	
 	private int nrOfHouses;
 	
@@ -52,7 +52,7 @@ public class RealEstate extends Property{
 	public void removeHotel() {
 		this.builtHotel = false;
 	}
-	//TODO Lav en "set" fordeling af huse
+	
 	
 	
 	

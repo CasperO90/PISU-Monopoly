@@ -11,7 +11,7 @@ import monopoly.mini.model.Property;
  */
 public class Utility extends Property {
 	
-	// @Casper
+	// @author Casper - 
 	
 	
 	private boolean ownUtility;
@@ -48,10 +48,6 @@ public class Utility extends Property {
 		return ownUtility;
 		
 	}
-	
-	
-	
-	//TODO lav en set fordeling af utilites
 	
 
 	/*

@@ -83,11 +83,8 @@ public class GameController {
 	 * is hard-coded. But this should be done by interacting with 
 	 * the user.
 	 */
-	//@Henrik
+	//@author Henrik @author Casper @author Elisa - opretter spiller interaktivt
 	public void createPlayers() {
-
-
-
 
 		amountOfPlayers = gui.getUserInteger(guiMessages[1], 2,6 );
 		int j=0; 

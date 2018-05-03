@@ -43,7 +43,7 @@ public class MiniMonopoly {
 		
 		
 		Game game = new Game();
-	//Implementering af felterne @Elisa
+	//@author Elisa - Implementering af felter
 		String [] guiMessages = ReadText.file("fields.txt");
 		
 		    
@@ -326,7 +326,7 @@ public class MiniMonopoly {
 		game.addSpace(p22);
 		properties.add(p22);
 		
-		//Chancekort - @Elisa, Casper
+		//@author Elisa og  @author Casper - Chancekort oprettes
 		
 		String [] chancekort = ReadText.file("funktioner.txt");
 		
