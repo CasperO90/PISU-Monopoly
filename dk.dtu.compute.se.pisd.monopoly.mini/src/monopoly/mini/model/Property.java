@@ -25,6 +25,7 @@ public class Property extends Space {
 	private Player owner;
 	
 /*	List <Property> properties  = new ArrayList<Property>();
+ Laver en hashmap, er ikke sikker om den skal bruges.....
 	
 	public void createMap() {
 		HashMap <Integer, List<Property>> colorToPropertyMap = new HashMap <Integer, List<Property>>();
