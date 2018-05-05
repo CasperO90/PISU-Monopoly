@@ -384,56 +384,7 @@ public class GameController {
 	 */
 	public void obtainCash(Player player, int amount) {
 		// TODO implement
-		/*
-		if(player.isBroke()) {
-		String choice = gui.getUserSelection(
-					"Player " + player.getName() +
-					": Do you want to sell a property " +
-					"yes", 
-					"no");
-		if(choice.equals("yes")) {
-			player.receiveMoney(amount + 3000);
-			player.removeAllProperties();
-			player.setBroke(false);
-
-		}
-		else {
-			player.setBroke(true);
-		}
-
-		 /*
-
-
-		/*		String choice = gui.getUserSelection(
-				"Player " + player.getName() +
-				": Do you want to sell property " + property.getName() +
-				" for " + property.getMortgage() + "$?",
-				"yes",
-				"no");
-		if (choice.equals("yes")) {
-			List<Property> list = new ArrayList<Property> ();
-			for (Space space: game.getSpaces()) {
-				if (space instanceof Property) {
-					Property property = (Property) space;
-					if(player.equals (property.getOwner())) {
-						list.add(property);
-
-					}
-
-				}
-			}
-
-			if (!list.isEmpty()) {
-				String choice1 = gui.getUserString(
-						"Player " + player.getName() + 
-						": Which property do you want to sell this property " + player.getOwnedProperties();
-						+ 
-
-						)
-			}
-
-			//receiveMoney(player, property.getMortgage());
-		 */	
+	
 
 
 	}	
