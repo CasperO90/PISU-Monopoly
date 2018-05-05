@@ -8,7 +8,9 @@ import monopoly.mini.model.Player;
 
 public class Player_Test {
 
-	
+	/**
+	 * @author Mathias 
+	 */
 			@Test
 			public void test() {
 					Player player = new Player();
