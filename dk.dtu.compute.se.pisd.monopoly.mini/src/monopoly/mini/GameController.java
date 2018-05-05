@@ -503,10 +503,11 @@ public class GameController {
 			for(Property property: list2) {
 				if (!player.equals(property.getOwner())) {
 					return;
+				}else {
+					utilities.setRent(45);
 				}
 			}
-		utilities.setRent(40);
-		}
+				}
 	}
 	//Buy house metoden. Hvis du ikke ejer alle i den samme farve får du ikke lov.
 	public void offerToBuyHouse(RealEstate realEstate, Player player) throws PlayerBrokeException {
@@ -514,9 +515,9 @@ public class GameController {
 			List <Property> list = this.propertyOfSameColor(realEstate);
 			
 			for(Property property: list) {
-				if (!player.equals(property.getOwner())) {
+				if (!player.equals(property.getOwner())) { //if player is not the owner of the property, nothing happens
 					return;
-				}else {
+				}else { //if player is the owner, it should offer to buy a house. 
 					String choice = gui.getUserSelection(
 							"Player " + player.getName() +
 							": Do you want to buy a house for " + realEstate.getHouseValue() + "$?",
@@ -530,7 +531,7 @@ public class GameController {
 							throw e;
 						}
 						realEstate.addHouse();
-						realEstate.setOwner(player);
+					
 						return;
 					}
 				}
