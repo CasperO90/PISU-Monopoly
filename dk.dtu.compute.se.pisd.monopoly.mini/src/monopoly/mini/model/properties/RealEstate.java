@@ -1,6 +1,9 @@
 package monopoly.mini.model.properties;
 
+import monopoly.mini.GameController;
+import monopoly.mini.model.Player;
 import monopoly.mini.model.Property;
+import monopoly.mini.model.exceptions.PlayerBrokeException;
 
 /**
  * A specific property, which represents real estate on which houses
@@ -40,6 +43,7 @@ public class RealEstate extends Property{
 	}
 	public void setHouseValue(int houseValue) {
 		this.houseValue = houseValue;
+		houseValue = 100;
 	}
 	public boolean hotelCheck() { //Checker om der er bygget et hotel
 		return builtHotel;
@@ -52,8 +56,11 @@ public class RealEstate extends Property{
 	public void removeHotel() {
 		this.builtHotel = false;
 	}
+	public void doAction(GameController controller, Player player) throws PlayerBrokeException {
+		if (owner.equals(player)) {
+			controller.offerToBuyHouse(this, player);
+		} 
 	
-	
-	
+	}
 	
 }

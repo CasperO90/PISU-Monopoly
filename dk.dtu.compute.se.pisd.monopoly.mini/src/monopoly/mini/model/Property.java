@@ -22,24 +22,8 @@ public class Property extends Space {
 	private int colorcode;
 	
 	
-	private Player owner;
+	protected Player owner;
 	
-/*	List <Property> properties  = new ArrayList<Property>();
- Laver en hashmap, er ikke sikker om den skal bruges.....
-	
-	public void createMap() {
-		HashMap <Integer, List<Property>> colorToPropertyMap = new HashMap <Integer, List<Property>>();
-		for (Property property : properties ) {
-			int color = property.getColorcode();
-			List<Property> list = colorToPropertyMap.get(color);
-			if (list== null) {
-				list = new ArrayList <Property>();
-				
-				colorToPropertyMap.put(color,list);
-			}
-			list.add(property);
-		}
-	}
 	
 	
 	/**

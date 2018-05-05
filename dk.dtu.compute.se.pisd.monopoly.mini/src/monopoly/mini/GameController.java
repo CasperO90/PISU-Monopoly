@@ -17,6 +17,8 @@ import monopoly.mini.model.Property;
 import monopoly.mini.model.ReadText;
 import monopoly.mini.model.Space;
 import monopoly.mini.model.exceptions.PlayerBrokeException;
+import monopoly.mini.model.properties.RealEstate;
+import monopoly.mini.model.properties.Utility;
 
 /***
  * The overall controller of a Monopoly game. It provides access
@@ -151,6 +153,7 @@ public class GameController {
 	public void initializeGUI() {		
 		this. view = new View(game, gui);
 		this.initializeColorMap();
+		this.initializeUtilityMap();
 	}
 
 	/**
@@ -492,12 +495,24 @@ public class GameController {
 			return new ArrayList <Property>(list);
 		} else {
 			return new ArrayList <Property>();//returnerer en tom liste hvis list er lig med null.
-		}
-		
-		
-		
-	//vores metode til at checke farverne initialiseret. 	
+		}	
 	}
+	//En map over utilites og deres colorcode author@Elisa
+	Map <Integer, List<Utility>> color2Utilities;
+	
+	public List <Utility> utilitiesOfSameColor(Utility utilities){
+		
+		List <Utility> list2 = color2Utilities.get(utilities.getColorcode());
+		
+		if (list2 !=null ) {
+			return new ArrayList <Utility>(list2);
+		}else {
+			return new ArrayList <Utility>();
+		}
+	}
+
+	
+	//Metode til at checke farverne initialiseret autor@Elísa. 	
 	private void initializeColorMap() {
 		color2Properties = new HashMap<Integer, List<Property>>();
 		 
@@ -512,6 +527,64 @@ public class GameController {
 				list.add(property);
 			}
 		}
+		
+	}
+	private void initializeUtilityMap() {
+		color2Utilities = new HashMap <Integer, List<Utility>>();
+		
+		for (Space space : game.getSpaces()) {
+			if (space instanceof Utility) {
+				Utility utilities = (Utility) space;
+				List<Utility> list2 = color2Utilities.get(utilities.getColorcode());
+				if (list2 == null) {
+					list2 = new ArrayList <Utility>();
+					color2Utilities.put(utilities.getColorcode(), list2);
+				}
+				list2.add(utilities);
+			}
+		}
+	}
+	
+	public void ownsAllUtilities (Utility utilities, Player player) {
+		if (player.equals(utilities.getOwner())) {
+			List <Utility> list2 = this.utilitiesOfSameColor(utilities);
+			
+			for(Property property: list2) {
+				if (!player.equals(property.getOwner())) {
+					return;
+				}
+			}
+		utilities.setRent(40);
+		}
+	}
+	//Buy house metoden. Hvis du ikke ejer alle i den samme farve får du ikke lov.
+	public void offerToBuyHouse(RealEstate realEstate, Player player) throws PlayerBrokeException {
+		if (player.equals(realEstate.getOwner())) {
+			List <Property> list = this.propertyOfSameColor(realEstate);
+			
+			for(Property property: list) {
+				if (!player.equals(property.getOwner())) {
+					return;
+				}else {
+					String choice = gui.getUserSelection(
+							"Player " + player.getName() +
+							": Do you want to buy a house for " + realEstate.getHouseValue() + "$?",
+							"yes",
+							"no");
+					if (choice.equals("yes")) {
+						try {
+							paymentToBank(player, realEstate.getHouseValue());
+						} catch (PlayerBrokeException e) {
+							
+							throw e;
+						}
+						realEstate.addHouse();
+						realEstate.setOwner(player);
+						return;
+					}
+				}
+			}
+			}
 		
 	}
 	/**
