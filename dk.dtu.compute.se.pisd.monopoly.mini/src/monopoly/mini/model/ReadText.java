@@ -16,12 +16,12 @@ public class ReadText {
 			while ((line = reader1.readLine()) != null) {
 				lines1.add(line);
 			}
-		//System.out.println(lines1);
+		
 		reader1.close();
 	} catch (IOException e) {
 		System.out.println("error");
 	} finally {
-	//System.out.println(fileName + " read");
+	
 	}
 	String[] li1 = new String[lines1.size()];
 	li1 = lines1.toArray(li1);

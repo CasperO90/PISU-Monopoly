@@ -340,7 +340,7 @@ public class GameController {
 	 * @param player the player going to jail
 	 */
 	public void gotoJail(Player player) {
-		// TODO the 10 should not be hard coded
+		
 		player.setCurrentPosition(game.getSpaces().get(10));
 		player.setInPrison(true);
 	}
@@ -404,9 +404,6 @@ public class GameController {
 	 * @throws PlayerBrokeException when the player chooses to buy but could not afford it
 	 */
 	public void offerToBuy(Property property, Player player) throws PlayerBrokeException {
-		// TODO We might also allow the player to obtainCash before
-		// the actual offer, to see whether he can free enough cash
-		// for the sale.
 
 		String choice = gui.getUserSelection(
 				"Player " + player.getName() +
@@ -606,8 +603,7 @@ public class GameController {
 	 * @param property the property which is for auction
 	 */
 	public void auction(Property property) {
-		// TODO auction needs to be implemented
-		gui.showMessage("Now, there would be an auction of " + property.getName() + ".");
+		
 	}
 
 	/**
