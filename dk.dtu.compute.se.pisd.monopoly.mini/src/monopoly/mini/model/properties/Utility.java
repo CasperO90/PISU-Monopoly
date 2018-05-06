@@ -1,6 +1,9 @@
 package monopoly.mini.model.properties;
 
+import monopoly.mini.GameController;
+import monopoly.mini.model.Player;
 import monopoly.mini.model.Property;
+import monopoly.mini.model.exceptions.PlayerBrokeException;
 
 /**
  * A specific property, which represents utilities which can
@@ -11,7 +14,7 @@ import monopoly.mini.model.Property;
  */
 public class Utility extends Property {
 	
-	// @author Casper - 
+	/** @author Casper & Elisa */
 	
 	
 	private boolean ownUtility;
@@ -49,45 +52,9 @@ public class Utility extends Property {
 		
 	}
 	
-
-	/*
-	 * private int nrOfHouses;
+		}
 	
-	private int houseValue; // hotel koster det samme som et hus
-	
-	private boolean builtHotel;
-	
-	public int getNrOfHouses() {
-		return nrOfHouses; 
-	}
-	public void setNrOfHouses(int nrOfHouses) {
-		this.nrOfHouses = nrOfHouses;		
-	}
-	
-	public void addHouse() {
-		this.nrOfHouses++;
-		//TODO defensiv programering = max 4 houses!
-	}
-	public void removeHouse() {
-		this.nrOfHouses--;
-		//TODO defensiv programmering = House min 0!
-	}
-	public int getHouseValue() {
-		return houseValue;
-	}
-	public void setHouseValue(int houseValue) {
-		this.houseValue = houseValue;
-	}
-	public boolean hotelCheck() { //Checker om der er bygget et hotel
-		return builtHotel;
-	}
-	
-
-	}
-	//TODO Lav en "set" fordeling af huse
-	
-	 */
 	
 		
-}
+
 

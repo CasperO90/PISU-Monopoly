@@ -22,24 +22,8 @@ public class Property extends Space {
 	private int colorcode;
 	
 	
-	private Player owner;
+	protected Player owner;
 	
-/*	List <Property> properties  = new ArrayList<Property>();
- Laver en hashmap, er ikke sikker om den skal bruges.....
-	
-	public void createMap() {
-		HashMap <Integer, List<Property>> colorToPropertyMap = new HashMap <Integer, List<Property>>();
-		for (Property property : properties ) {
-			int color = property.getColorcode();
-			List<Property> list = colorToPropertyMap.get(color);
-			if (list== null) {
-				list = new ArrayList <Property>();
-				
-				colorToPropertyMap.put(color,list);
-			}
-			list.add(property);
-		}
-	}
 	
 	
 	/**
@@ -61,6 +45,7 @@ public class Property extends Space {
 		this.mortgage = mortgage;
 		notifyChange();
 	}
+	/** @author Elisa */
 	public int getColorcode() {
 		return colorcode;
 	}
@@ -124,12 +109,7 @@ public class Property extends Space {
 		if (owner == null) {
 			controller.offerToBuy(this, player);
 		} else if (!owner.equals(player)) {
-			// TODO also check whether the property is mortgaged
-			// TODO the computation of the actual rent could be delegated
-			//      the subclasses of Property, which can take the specific
-			//      individual conditions into account. Note that the
-			//      groups of properties (which are not part of the model
-			//      yet also need to be taken into account).
+		
 			controller.payment(player, rent, owner);
 		}
 	}
