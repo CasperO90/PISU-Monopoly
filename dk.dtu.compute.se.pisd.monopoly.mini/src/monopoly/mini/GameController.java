@@ -500,9 +500,10 @@ public class GameController {
 			}
 		}
 	}
-	/** @author Elisa */
+	/** @author Elisa 
+	 *  */
 	//Checker om spilleren ejer alle utilities af samme colorcode.
-	public void ownsAllUtilities (Utility utilities, Player player) {
+	public void ownsAllUtilities (Utility utilities, Player player) throws PlayerBrokeException  {
 		if (player.equals(utilities.getOwner())) {
 			List <Utility> list2 = this.utilitiesOfSameColor(utilities);
 			

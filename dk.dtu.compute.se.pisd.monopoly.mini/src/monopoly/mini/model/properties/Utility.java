@@ -52,13 +52,8 @@ public class Utility extends Property {
 		
 	}
 	
-	public void doAction(GameController controller, Player player){
-		
-			controller.ownsAllUtilities(this, player);
-		
-	}
+		}
 	
-	}
 	
 		
 
