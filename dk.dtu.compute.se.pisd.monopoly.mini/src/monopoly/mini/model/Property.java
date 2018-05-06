@@ -45,6 +45,7 @@ public class Property extends Space {
 		this.mortgage = mortgage;
 		notifyChange();
 	}
+	/** @author Elisa */
 	public int getColorcode() {
 		return colorcode;
 	}

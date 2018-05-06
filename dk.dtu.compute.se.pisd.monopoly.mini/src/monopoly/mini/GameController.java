@@ -434,7 +434,7 @@ public class GameController {
 		auction(property);
 		
 	}
-	/**@author Elisa & Henrik*/
+	/**@author Elisa*/
 	
 	// Ser om man ejer alle fra en farvegruppe 
 	//En map som checker farverne af properties.
@@ -452,7 +452,7 @@ public class GameController {
 		}	
 	}
 	/** @author Elisa */
-	//En map over utilites og deres colorcode author@Elisa
+	//En map over utilites og deres colorcode 
 	Map <Integer, List<Utility>> color2Utilities;
 	
 	public List <Utility> utilitiesOfSameColor(Utility utilities){
@@ -466,8 +466,8 @@ public class GameController {
 		}
 	}
 
-	
-	//Metode til at checke farverne initialiseret autor@Elísa. 	
+	/** @author Elisa */
+	//Metode til at checke farverne initialiseret. 	
 	private void initializeColorMap() {
 		color2Properties = new HashMap<Integer, List<Property>>();
 		 
@@ -500,6 +500,7 @@ public class GameController {
 			}
 		}
 	}
+	/** @author Elisa */
 	//Checker om spilleren ejer alle utilities af samme colorcode.
 	public void ownsAllUtilities (Utility utilities, Player player) {
 		if (player.equals(utilities.getOwner())) {
@@ -514,6 +515,8 @@ public class GameController {
 			}
 				} utilities.doAction(this, player);
 	}
+	
+	/** @author Elisa */
 	//Buy house metoden. Hvis du ikke ejer alle i den samme farve får du ikke lov til at købe.
 	public void offerToBuyHouse(RealEstate realEstate, Player player) throws PlayerBrokeException, PlayerDoesntOwnAll {
 		if (player.equals(realEstate.getOwner())) {

@@ -3,7 +3,6 @@ package monopoly.mini.model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import monopoly.mini.model.Property;
 
 import designpatterns.Subject;
 
@@ -73,7 +72,7 @@ public class Game extends Subject {
 	 * @return the topmost card of the deck
 	 */
 	public Card drawCardFromDeck() {
-		// TODO should be more defensive
+
 		Card card = cardDeck.remove(0);
 		notifyChange();
 		return card;

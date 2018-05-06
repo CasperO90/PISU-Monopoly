@@ -16,13 +16,11 @@ import monopoly.mini.model.exceptions.PlayerDoesntOwnAll;
  */
 public class RealEstate extends Property{
 	
-	/** @author Casper & Elisa */
+
 	
 	private int nrOfHouses;
 	
-	private int houseValue; // hotel koster det samme som et hus
-	
-	private boolean builtHotel;
+	private int houseValue; 
 	
 	public int getNrOfHouses() {
 		return nrOfHouses; 
@@ -33,11 +31,11 @@ public class RealEstate extends Property{
 	
 	public void addHouse() {
 		this.nrOfHouses++;
-		//TODO defensiv programering = max 4 houses!
+		
 	}
 	public void removeHouse() {
 		this.nrOfHouses--;
-		//TODO defensiv programmering = House min 0!
+		
 	}
 	public int getHouseValue() {
 		return houseValue;
@@ -46,7 +44,7 @@ public class RealEstate extends Property{
 		this.houseValue = houseValue;
 		houseValue = 100;
 	}
-	
+	/** @author Elisa */
 	public void doAction(GameController controller, Player player) throws PlayerBrokeException {
 		if (owner.equals(player)) {
 			try {

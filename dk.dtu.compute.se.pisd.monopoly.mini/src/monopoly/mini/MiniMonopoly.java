@@ -268,7 +268,7 @@ public class MiniMonopoly {
 		goToJail.setName(guiMessages[30]);
 		game.addSpace(goToJail);
 		
-		
+		/** @author Elisa */
 		Property p18 = new Property();
 		p18.setName(guiMessages[31]);
 		p18.setCost(300);
@@ -329,7 +329,7 @@ public class MiniMonopoly {
 		game.addSpace(p22);
 		properties.add(p22);
 		
-		//@author Elisa og  @author Casper - Chancekort oprettes
+		/** @author Elisa og Casper */
 		
 		String [] chancekort = ReadText.file("funktioner.txt");
 		
@@ -456,7 +456,7 @@ public class MiniMonopoly {
 		game.setCardDeck(cards);
 		
 		//Kort hvor du skal betale til banken
-		
+		/** @author Elisa */
 		CardPayMoneyToBank pay1 = new CardPayMoneyToBank();
 		pay1.setText(chancekort[27]);
 		pay1.setAmount(10);
