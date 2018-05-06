@@ -479,8 +479,8 @@ public class GameController {
 		// is started
 		auction(property);
 	}
-	// se om man ejer alle fra en farvegruppe author@Elisa
-	//En map som checker farverne af properties.
+	// se om man ejer alle fra en farvegruppe @author Elisa
+	//Et map som checker farverne af properties.
 	
 	Map <Integer,List<Property>> color2Properties;
 	
