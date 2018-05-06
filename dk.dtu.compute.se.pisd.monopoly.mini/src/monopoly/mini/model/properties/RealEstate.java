@@ -4,6 +4,7 @@ import monopoly.mini.GameController;
 import monopoly.mini.model.Player;
 import monopoly.mini.model.Property;
 import monopoly.mini.model.exceptions.PlayerBrokeException;
+import monopoly.mini.model.exceptions.PlayerDoesntOwnAll;
 
 /**
  * A specific property, which represents real estate on which houses
@@ -58,7 +59,12 @@ public class RealEstate extends Property{
 	}
 	public void doAction(GameController controller, Player player) throws PlayerBrokeException {
 		if (owner.equals(player)) {
-			controller.offerToBuyHouse(this, player);
+			try {
+				controller.offerToBuyHouse(this, player);
+			} catch (PlayerDoesntOwnAll e) {
+			
+				e.printStackTrace();
+			}
 		} 
 	
 	}

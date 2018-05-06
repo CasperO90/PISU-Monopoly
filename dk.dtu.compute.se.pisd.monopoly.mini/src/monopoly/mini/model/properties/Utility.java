@@ -1,6 +1,9 @@
 package monopoly.mini.model.properties;
 
+import monopoly.mini.GameController;
+import monopoly.mini.model.Player;
 import monopoly.mini.model.Property;
+import monopoly.mini.model.exceptions.PlayerBrokeException;
 
 /**
  * A specific property, which represents utilities which can
@@ -11,7 +14,7 @@ import monopoly.mini.model.Property;
  */
 public class Utility extends Property {
 	
-	// @author Casper - 
+	// @author Casper - @author Elisa 
 	
 	
 	private boolean ownUtility;
@@ -49,7 +52,11 @@ public class Utility extends Property {
 		
 	}
 	
-
+	public void doAction(GameController controller, Player player){
+		
+			controller.ownsAllUtilities(this, player);
+		
+	}
 	
 	}
 	

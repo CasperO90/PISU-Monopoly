@@ -17,6 +17,7 @@ import monopoly.mini.model.Property;
 import monopoly.mini.model.ReadText;
 import monopoly.mini.model.Space;
 import monopoly.mini.model.exceptions.PlayerBrokeException;
+import monopoly.mini.model.exceptions.PlayerDoesntOwnAll;
 import monopoly.mini.model.properties.RealEstate;
 import monopoly.mini.model.properties.Utility;
 
@@ -330,6 +331,7 @@ public class GameController {
 		// Execute the action associated with the respective space. Note
 		// that this is delegated to the field, which implements this action
 		space.doAction(this, player);
+		
 	}	
 
 	/**
@@ -479,7 +481,7 @@ public class GameController {
 			}
 		}
 		
-	}
+	}//initialisering af utility map. author@Elisa
 	private void initializeUtilityMap() {
 		color2Utilities = new HashMap <Integer, List<Utility>>();
 		
@@ -495,50 +497,51 @@ public class GameController {
 			}
 		}
 	}
-	
+	//Checker om spilleren ejer alle utilities af samme colorcode.
 	public void ownsAllUtilities (Utility utilities, Player player) {
 		if (player.equals(utilities.getOwner())) {
 			List <Utility> list2 = this.utilitiesOfSameColor(utilities);
 			
-			for(Property property: list2) {
+			for(Property property: list2) { //itererer over alle properties på list2 (kun utilities)
 				if (!player.equals(property.getOwner())) {
 					return;
 				}else {
-					utilities.setRent(45);
+					utilities.setRent(45); //lejen bliver 45 hvis spilleren ejer redderier af samme colorcode.
 				}
 			}
-				}
+				} utilities.doAction(this, player);
 	}
-	//Buy house metoden. Hvis du ikke ejer alle i den samme farve får du ikke lov.
-	public void offerToBuyHouse(RealEstate realEstate, Player player) throws PlayerBrokeException {
+	//Buy house metoden. Hvis du ikke ejer alle i den samme farve får du ikke lov til at købe.
+	public void offerToBuyHouse(RealEstate realEstate, Player player) throws PlayerBrokeException, PlayerDoesntOwnAll {
 		if (player.equals(realEstate.getOwner())) {
 			List <Property> list = this.propertyOfSameColor(realEstate);
 			
 			for(Property property: list) {
-				if (!player.equals(property.getOwner())) { //if player is not the owner of the property, nothing happens
-					return;
-				}else { //if player is the owner, it should offer to buy a house. 
-					String choice = gui.getUserSelection(
-							"Player " + player.getName() +
-							": Do you want to buy a house for " + realEstate.getHouseValue() + "$?",
-							"yes",
-							"no");
-					if (choice.equals("yes")) {
-						try {
-							paymentToBank(player, realEstate.getHouseValue());
-						} catch (PlayerBrokeException e) {
-							
-							throw e;
-						}
-						realEstate.addHouse();
-					
-						return;
+				if (player.equals(property.getOwner())) { //if player is the owner of the property, the following happens:
+		
+				String choice2 = gui.getUserSelection(
+						"Player " + player.getName() +
+						": Do you want to buy a house for " + realEstate.getHouseValue() + "$?",
+						"yes",
+						"no");
+				if (choice2.equals("yes")) {
+					try {
+						paymentToBank(player, realEstate.getHouseValue());
+					} catch (PlayerBrokeException e) { //same as when buying a property, exception will be thrown if player can´t afford it.
+						
+						throw e;
 					}
+					realEstate.addHouse();
+				
+					return;
+				} 
+						}
+					}	
 				}
 			}
-			}
+			
 		
-	}
+	
 	/**
 	 * This method implements a payment activity to another player,
 	 * which involves the player to obtain some cash on the way, in case he does
