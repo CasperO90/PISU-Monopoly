@@ -16,7 +16,7 @@ import monopoly.mini.model.exceptions.PlayerDoesntOwnAll;
  */
 public class RealEstate extends Property{
 	
-	// @author Casper og @author Andreas
+	// @author Casper og @author Elisa
 	
 	private int nrOfHouses;
 	
@@ -46,17 +46,7 @@ public class RealEstate extends Property{
 		this.houseValue = houseValue;
 		houseValue = 100;
 	}
-	public boolean hotelCheck() { //Checker om der er bygget et hotel
-		return builtHotel;
-	}
 	
-	public void addHotel() {
-		this.builtHotel = true;
-		//TODO defensiv programmering: Den kan kun være true 1 gang, indtil den bliver false
-	}
-	public void removeHotel() {
-		this.builtHotel = false;
-	}
 	public void doAction(GameController controller, Player player) throws PlayerBrokeException {
 		if (owner.equals(player)) {
 			try {
