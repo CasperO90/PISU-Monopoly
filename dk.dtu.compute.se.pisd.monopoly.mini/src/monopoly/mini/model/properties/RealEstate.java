@@ -16,7 +16,7 @@ import monopoly.mini.model.exceptions.PlayerDoesntOwnAll;
  */
 public class RealEstate extends Property{
 	
-	// @author Casper og @author Elisa
+	/** @author Casper & Elisa */
 	
 	private int nrOfHouses;
 	

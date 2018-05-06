@@ -89,7 +89,7 @@ public class GameController {
 	 * is hard-coded. But this should be done by interacting with 
 	 * the user.
 	 */
-	//@author Henrik @author Casper @author Elisa - opretter spiller interaktivt
+	/**@author Henrik @author Casper @author Elisa - opretter spiller interaktivt*/
 	public void createPlayers() {
 
 		amountOfPlayers = gui.getUserInteger(guiMessages[1], 2,6 );
@@ -132,7 +132,7 @@ public class GameController {
 			try {
 				sql.createPlayer(p);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+		
 				e.printStackTrace();
 			}
 
@@ -210,7 +210,7 @@ public class GameController {
 
 			}
 
-			// TODO offer all players the options to trade etc.
+			
 
 			current = (current + 1) % players.size();
 			game.setCurrentPlayer(players.get(current));
@@ -229,7 +229,7 @@ public class GameController {
 			try {
 				sql.updatePlayer(player, game);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 
@@ -248,7 +248,7 @@ public class GameController {
 	 * @param player the player making the move
 	 * @throws PlayerBrokeException if the player goes broke during the move
 	 */
-	//@Henrik & @Marthias
+	
 	public void makeMove(Player player) throws PlayerBrokeException {
 
 		boolean castDouble;
@@ -258,7 +258,10 @@ public class GameController {
 			int die2 = (int) (1 + 3.0*Math.random());
 			castDouble = (die1 == die2);
 			gui.setDice(die1, die2);
-
+			/**@author Henrik & Mathias
+			 */ 
+			//Man kommer ud af fængslet hvis man slår 2 ens og hvis ikke så har man mulighed for at købe sig ud for 50$.
+			 
 			if (player.isInPrison() && castDouble) {
 				player.setInPrison(false);
 				gui.showMessage("Player " + player.getName() + " leaves prison now since he cast a double!");
@@ -320,9 +323,7 @@ public class GameController {
 		player.setCurrentPosition(space);
 
 		if (posOld > player.getCurrentPosition().getIndex()) {
-			// Note that this assumes that the game has more than 12 spaces here!
-			// TODO: the amount of 2000$ should not be a fixed constant here (could also
-			//       be configured in the Game class.
+			
 			gui.showMessage("Player " + player.getName() + " receives 200$ for passing Go!");
 			this.paymentFromBank(player, 200);
 		}		
@@ -385,7 +386,7 @@ public class GameController {
 	 * @param amount the amount the player should have available after the act
 	 */
 	public void obtainCash(Player player, int amount) {
-		// TODO implement
+		
 	
 
 
@@ -431,8 +432,11 @@ public class GameController {
 		// In case the player does not buy the property an auction
 		// is started
 		auction(property);
+		
 	}
-	// se om man ejer alle fra en farvegruppe author@Elisa
+	/**@author Elisa & Henrik*/
+	
+	// Ser om man ejer alle fra en farvegruppe 
 	//En map som checker farverne af properties.
 	
 	Map <Integer,List<Property>> color2Properties;
@@ -447,6 +451,7 @@ public class GameController {
 			return new ArrayList <Property>();//returnerer en tom liste hvis list er lig med null.
 		}	
 	}
+	/** @author Elisa */
 	//En map over utilites og deres colorcode author@Elisa
 	Map <Integer, List<Utility>> color2Utilities;
 	
@@ -478,7 +483,8 @@ public class GameController {
 			}
 		}
 		
-	}//initialisering af utility map. author@Elisa
+	}/** @author Elisa */
+	//initialisering af utility map.
 	private void initializeUtilityMap() {
 		color2Utilities = new HashMap <Integer, List<Utility>>();
 		
@@ -647,7 +653,7 @@ public class GameController {
 		player.setBalance(0);
 		player.setBroke(true);
 
-		// TODO we also need to remove the houses and the mortgage from the properties 
+		
 
 		for (Property property: player.getOwnedProperties()) {
 			property.setOwner(null);
@@ -668,9 +674,7 @@ public class GameController {
 		if (!disposed) {
 			disposed = true;
 			view.dispose();
-			// TODO we should also dispose of the GUI here. But this works only
-			//      for my private version on the GUI and not for the GUI currently
-			//      deployed via Maven (or other  official versions)
+		
 		}
 	}
 

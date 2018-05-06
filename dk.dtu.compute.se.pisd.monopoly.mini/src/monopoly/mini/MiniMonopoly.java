@@ -43,7 +43,8 @@ public class MiniMonopoly {
 		
 		
 		Game game = new Game();
-	//@author Elisa - Implementering af felter
+		/** @author Elisa */
+	//Implementering af felter
 		String [] guiMessages = ReadText.file("fields.txt");
 		
 		    
@@ -260,6 +261,8 @@ public class MiniMonopoly {
 		p17.setColorcode(6);
 		game.addSpace(p17);
 		properties.add(p17);
+		
+		/** @author Henrik */
 		
 		Space goToJail = new GoToJail();
 		goToJail.setName(guiMessages[30]);

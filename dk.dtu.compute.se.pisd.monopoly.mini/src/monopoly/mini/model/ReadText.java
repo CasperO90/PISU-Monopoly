@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/** @author Elisa */
+
 public class ReadText {
 	public static String[] file(String fileName) {
 

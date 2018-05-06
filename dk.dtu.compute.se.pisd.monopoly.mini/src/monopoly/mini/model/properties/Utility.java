@@ -14,7 +14,7 @@ import monopoly.mini.model.exceptions.PlayerBrokeException;
  */
 public class Utility extends Property {
 	
-	// @author Casper - @author Elisa 
+	/** @author Casper & Elisa */
 	
 	
 	private boolean ownUtility;
